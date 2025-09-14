@@ -1,0 +1,31 @@
+{
+  "name": "cucumber-playwright-tests",
+  "version": "1.0.0",
+  "description": "UI test automation project using Cucumber (BDD) and Playwright",
+  "main": "index.js",
+
+  "scripts": {
+  "test": "cucumber-js --require features/step_definitions --require features/support --format json:reports/report.json",
+  "report": "node generate-report.js",
+  "test:report": "npm-run-all --continue-on-error test report"
+},
+
+  "repository": {
+    "type": "git",
+    "url": "git@github-tests:qazhurauleu-ai/cucumber-playwright-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "@playwright/test": "^1.55.0",
+    "cucumber-html-reporter": "^7.2.0",
+    "npm-run-all": "^4.1.5",
+    "playwright": "^1.55.0"
+  },
+  "dependencies": {
+    "iban": "^0.0.14"
+  }
+}
+

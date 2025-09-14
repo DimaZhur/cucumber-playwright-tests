@@ -1,0 +1,3017 @@
+[
+  {
+    "description": "  In order to manage system access  \n  As an admin user  \n  I want to be able to create a new company beneficiary",
+    "elements": [
+      {
+        "description": "",
+        "id": "add-company-beneficiary;create-a-new-company-beneficiary",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Create a new company beneficiary",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 238472099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1545917200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 286838900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 835769499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I go to the Beneficiaries page",
+            "match": {
+              "location": "features\\step_definitions\\addCompBen.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2384506700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I click on \"Add beneficiary\" on the page",
+            "match": {
+              "location": "features\\step_definitions\\addCompBen.steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 297126199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I click on \"Company\" tab on the modal Add beneficiary",
+            "match": {
+              "location": "features\\step_definitions\\addCompBen.steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 215399599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I select currency \"EUR\" on the modal",
+            "match": {
+              "location": "features\\step_definitions\\addCompBen.steps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 71293200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I fill a company beneficiary info in the form",
+            "match": {
+              "location": "features\\step_definitions\\addCompBen.steps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11726800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I fill IBAN field with random Austrian IBAN on the modal",
+            "match": {
+              "location": "features\\step_definitions\\addCompBen.steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5828700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I click Add beneficiary on the modal",
+            "match": {
+              "location": "features\\step_definitions\\addCompBen.steps.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 910755600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I should see a success message \"Beneficiary has been created\"",
+            "match": {
+              "location": "features\\step_definitions\\common.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 377378600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I should see the new beneficiary on the dashboard",
+            "match": {
+              "location": "features\\step_definitions\\addCompBen.steps.js:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2719799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 126232000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "add-company-beneficiary",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Add company beneficiary",
+    "tags": [],
+    "uri": "features\\addCompBen.feature"
+  },
+  {
+    "description": "  In order to manage system access  \n  As an admin user  \n  I want to be able to create a new individual beneficiary",
+    "elements": [
+      {
+        "description": "",
+        "id": "add-individual-beneficiary;create-a-new-individual-beneficiary",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Create a new individual beneficiary",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 195934000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1504256099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 281401900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 830425099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I navigate to the Beneficiaries page",
+            "match": {
+              "location": "features\\step_definitions\\addIndBen.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2388866299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I click on \"Add beneficiary\" to create a beneficiary",
+            "match": {
+              "location": "features\\step_definitions\\addIndBen.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 298273199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I select currency \"EUR\"",
+            "match": {
+              "location": "features\\step_definitions\\addIndBen.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 268020699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I fill a beneficiary info in the form",
+            "match": {
+              "location": "features\\step_definitions\\addIndBen.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19720699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I fill IBAN field with random Austrian IBAN",
+            "match": {
+              "location": "features\\step_definitions\\addIndBen.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9524199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I click Add beneficiary",
+            "match": {
+              "location": "features\\step_definitions\\addIndBen.js:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 384848600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I should see a success message \"Beneficiary has been created\"",
+            "match": {
+              "location": "features\\step_definitions\\common.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 389878000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I should see the new beneficiary at the top of the list",
+            "match": {
+              "location": "features\\step_definitions\\addIndBen.js:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2122900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 105877899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "add-individual-beneficiary",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Add individual beneficiary",
+    "tags": [],
+    "uri": "features\\addIndBen.feature"
+  },
+  {
+    "description": "  In order to manage system access  \n  As an admin user  \n  I want to be able to create a new user with full access",
+    "elements": [
+      {
+        "description": "",
+        "id": "add-user-with-full-access;create-a-new-user-with-full-access",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Create a new user with full access",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 207109800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 819885299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 277726500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 837578999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I navigate to the Users page",
+            "match": {
+              "location": "features\\step_definitions\\addUserFullAccess.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2381895400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I click on \"Add user\" to create a user",
+            "match": {
+              "location": "features\\step_definitions\\addUserFullAccess.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 232420500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I fill a user info in the form",
+            "match": {
+              "location": "features\\step_definitions\\addUserFullAccess.steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 468293300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I click Add user",
+            "match": {
+              "location": "features\\step_definitions\\addUserFullAccess.steps.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 614833699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24489399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I should see a success message \"User created\"",
+            "match": {
+              "location": "features\\step_definitions\\common.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 882290900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I should see the new user at the top of the list",
+            "match": {
+              "location": "features\\step_definitions\\addUserFullAccess.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1765600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 107468000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "add-user-with-full-access",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Add user with full access",
+    "tags": [],
+    "uri": "features\\addUserFullAccess.feature"
+  },
+  {
+    "description": "    In order to send multiple payments at once  \n    As a logged-in user  \n    I want to be able to create a new bulk payment",
+    "elements": [
+      {
+        "description": "",
+        "id": "bulk-payment;create-a-new-bulk",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Create a new Bulk",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 194069700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1512298200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 282075399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 822139400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click on \"Bulk payments\" to create a new bulk payment",
+            "match": {
+              "location": "features\\step_definitions\\bulk.steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2396004300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see the \"Bulk payments\"",
+            "match": {
+              "location": "features\\step_definitions\\bulk.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 111006800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I select \"SEPA Transfer\"",
+            "match": {
+              "location": "features\\step_definitions\\bulk.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 70502599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I upload the file \"SEPA bulk payment valid.csv\"",
+            "match": {
+              "location": "features\\step_definitions\\bulk.steps.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4743600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I open the wallet dropdown",
+            "match": {
+              "location": "features\\step_definitions\\bulk.steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 900487800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I click on wallet \"AT 3326 GuruPay C2S\"",
+            "match": {
+              "location": "features\\step_definitions\\bulk.steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29890900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I click \"Next\" to proceed to the next step",
+            "match": {
+              "location": "features\\step_definitions\\bulk.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112627300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I click \"Confirm\" to finish",
+            "match": {
+              "location": "features\\step_definitions\\bulk.steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33137499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I should see bulk payment \"- 6,99 EUR\" at current time",
+            "match": {
+              "location": "features\\step_definitions\\bulk.steps.js:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3008281999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I should be on I should be on the page of the wallet \"3326\" that was used",
+            "match": {
+              "location": "features\\step_definitions\\bulk.steps.js:94"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1855999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 96414400
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "bulk-payment",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Bulk payment",
+    "tags": [],
+    "uri": "features\\bulk.feature"
+  },
+  {
+    "description": "  In order to purchase cryptocurrency conveniently  \n  As a logged-in user  \n  I want to be able to create a new crypto purchase",
+    "elements": [
+      {
+        "description": "",
+        "id": "buy-crypto;create-a-new-buy-crypto",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Create a new Buy Crypto",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 199741600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1535929399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 268133799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 838871400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I navigate to the Crypto page from the menu",
+            "match": {
+              "location": "features\\step_definitions\\buyCrypto.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2376237900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I click on the Buy Crypto action",
+            "match": {
+              "location": "features\\step_definitions\\buyCrypto.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131984299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I select \"TRC20\" network in Buy Crypto form",
+            "match": {
+              "location": "features\\step_definitions\\buyCrypto.steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 367312399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I enter \"TKSXDA8HfE9E1y39RczVQ1ZascUEtaSToF\" as crypto wallet address",
+            "match": {
+              "location": "features\\step_definitions\\buyCrypto.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5680200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I enter \"10\" as amount in Buy Crypto form",
+            "match": {
+              "location": "features\\step_definitions\\buyCrypto.steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7231800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I click the Wallet list",
+            "match": {
+              "location": "features\\step_definitions\\buyCrypto.steps.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18576400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I select wallet \"AT 3326 GuruPay C2S\" in Buy Crypto form",
+            "match": {
+              "location": "features\\step_definitions\\buyCrypto.steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3042597000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I submit the Buy Crypto form",
+            "match": {
+              "location": "features\\step_definitions\\buyCrypto.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1035860599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26519200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I should see a success message \"Payment has been executed successfully!\"",
+            "match": {
+              "location": "features\\step_definitions\\common.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1893115499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I should be on the crypto page after buy crypto",
+            "match": {
+              "location": "features\\step_definitions\\buyCrypto.steps.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1002791700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "I should see buy crypto transaction \"- 10,00 EUR\" at current time",
+            "match": {
+              "location": "features\\step_definitions\\buyCrypto.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3009050899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 99384899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "buy-crypto",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Buy Crypto",
+    "tags": [],
+    "uri": "features\\buyCrypto.feature"
+  },
+  {
+    "description": "  In order to keep my account secure  \n  As a user  \n  I want to be able to change my password  ",
+    "elements": [
+      {
+        "description": "",
+        "id": "change-password;successfully-change-password",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Successfully change password",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 190846499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 687771399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 289317399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 834761499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click on the profile avatar on the home page",
+            "match": {
+              "location": "features\\step_definitions\\changePassword.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2863932899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I select Settings in the profile menu",
+            "match": {
+              "location": "features\\step_definitions\\changePassword.steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37856800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click on the password tab",
+            "match": {
+              "location": "features\\step_definitions\\changePassword.steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 129955200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I click the \"Change password\" on the change password page",
+            "match": {
+              "location": "features\\step_definitions\\changePassword.steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 118122100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I change password from \"111111zZ!\" to \"111111zZx!\"",
+            "match": {
+              "location": "features\\step_definitions\\changePassword.steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132682899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1332331900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I should see a success message \"Password was successfully changed!\"",
+            "match": {
+              "location": "features\\step_definitions\\common.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1884742299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I click the \"Logout\" button for logout",
+            "match": {
+              "location": "features\\step_definitions\\changePassword.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24397299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I am on login page",
+            "match": {
+              "location": "features\\step_definitions\\changePassword.steps.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 179538099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I login again",
+            "match": {
+              "location": "features\\step_definitions\\changePassword.steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 130835599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1338993799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I click on the profile avatar on the home page",
+            "match": {
+              "location": "features\\step_definitions\\changePassword.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2362114500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I select Settings in the profile menu",
+            "match": {
+              "location": "features\\step_definitions\\changePassword.steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38820200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I click on the password tab",
+            "match": {
+              "location": "features\\step_definitions\\changePassword.steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 129249499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "I click the \"Change password\" on the change password page",
+            "match": {
+              "location": "features\\step_definitions\\changePassword.steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116075899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I change password from \"111111zZx!\" to \"111111zZ!\"",
+            "match": {
+              "location": "features\\step_definitions\\changePassword.steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116872900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 823396899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "I should see a success message \"Password was successfully changed!\"",
+            "match": {
+              "location": "features\\step_definitions\\common.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 883399400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 121275600
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "change-password",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Change password",
+    "tags": [],
+    "uri": "features\\changePassword.feature"
+  },
+  {
+    "description": "  In order to exchange transfer\n  As a logged-in user\n  I want to be able to create a new exchange",
+    "elements": [
+      {
+        "description": "",
+        "id": "exchanges;create-a-new-exchange",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Create a new exchange",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 202394299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 938606500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 286453300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 823500600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click on Exchange to create a new exchange",
+            "match": {
+              "location": "features\\step_definitions\\exchange.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2379727500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see the exchange form",
+            "match": {
+              "location": "features\\step_definitions\\exchange.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 362135699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I enter exchange amount \"10\"",
+            "match": {
+              "location": "features\\step_definitions\\exchange.steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8629600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I open the wallets dropdown in exchange",
+            "match": {
+              "location": "features\\step_definitions\\exchange.steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48637099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I select wallet \"AT Custom Pooled IFX 3329\" in exchange",
+            "match": {
+              "location": "features\\step_definitions\\exchange.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45780899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I open the destination wallets dropdown in exchange",
+            "match": {
+              "location": "features\\step_definitions\\exchange.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116365000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I select destination wallet \"AT Custom Pooled IFX 3331\" in exchange",
+            "match": {
+              "location": "features\\step_definitions\\exchange.steps.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34751600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I submit the exchange form",
+            "match": {
+              "location": "features\\step_definitions\\exchange.steps.js:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 530529900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25440799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should see a success message \"Conversion has been executed successfully!\"",
+            "match": {
+              "location": "features\\step_definitions\\common.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1884280000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I should be on the home page after exchange",
+            "match": {
+              "location": "features\\step_definitions\\exchange.steps.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2608299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I should see the latest exchange transaction \"Currency exchange 10.00 EUR to PLN\" at current time",
+            "match": {
+              "location": "features\\step_definitions\\exchange.steps.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3005243300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 110730800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "exchanges",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Exchanges",
+    "tags": [],
+    "uri": "features\\exchange.feature"
+  },
+  {
+    "description": "  In order to access secure system resources  \n  As a sub-user  \n  I want to be able to generate a valid JWT token  ",
+    "elements": [
+      {
+        "description": "",
+        "id": "jwt-tokens-generation;generate-a-new-jwt-token",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Generate a new JWT token",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 197463999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1517880000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with sub-user credentials",
+            "match": {
+              "location": "features\\step_definitions\\subUserLogin.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 264146499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1340283400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click on the profile avatar",
+            "match": {
+              "location": "features\\step_definitions\\jwtTokens.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1873744900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I click on Settings in the profile menu",
+            "match": {
+              "location": "features\\step_definitions\\jwtTokens.steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37321100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click on the Security tab",
+            "match": {
+              "location": "features\\step_definitions\\jwtTokens.steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 114726099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click on the \"Create token pair\" button",
+            "match": {
+              "location": "features\\step_definitions\\jwtTokens.steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 150066000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I enter \"172.31.2.106\" into the IP address field",
+            "match": {
+              "location": "features\\step_definitions\\jwtTokens.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 98579100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I enter a session name with current date and time",
+            "match": {
+              "location": "features\\step_definitions\\jwtTokens.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8486100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I push \"Confirm\"",
+            "match": {
+              "location": "features\\step_definitions\\jwtTokens.steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 551236000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27297599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I save the generated tokens to a file",
+            "match": {
+              "location": "features\\step_definitions\\jwtTokens.steps.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 831136100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I click on \"Ok, I got it\"",
+            "match": {
+              "location": "features\\step_definitions\\jwtTokens.steps.js:96"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35936000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I should see the new session in the list",
+            "match": {
+              "location": "features\\step_definitions\\jwtTokens.steps.js:103"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4714500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 97605400
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "jwt-tokens-generation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "JWT Tokens Generation",
+    "tags": [],
+    "uri": "features\\jwtTokens.feature"
+  },
+  {
+    "description": "  In order to access my account\n  As a registered user\n  I want to be able to log in successfully",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;successful-login",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Successful login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 202867500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1511254199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 300089700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 836131599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should see the dashboard",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2354133300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 111653899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [],
+    "uri": "features\\login.feature"
+  },
+  {
+    "description": "    In order to get a new payment card\n    As a logged-in user\n    I want to be able to order a physical card",
+    "elements": [
+      {
+        "description": "",
+        "id": "order-a-physical-card;create-a-new-physical-card",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Create a new physical card",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 204630899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1505284699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 293149499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 830213899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click on \"Order a card\" to order a new physical card",
+            "match": {
+              "location": "features\\step_definitions\\orderPhysCard.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2373138300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see the \"Order a card\" modal window",
+            "match": {
+              "location": "features\\step_definitions\\orderPhysCard.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2247999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I select \"Physical card\" option",
+            "match": {
+              "location": "features\\step_definitions\\orderPhysCard.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 303792900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click \"Next\" to proceed to data entry",
+            "match": {
+              "location": "features\\step_definitions\\orderPhysCard.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60553100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I fill in the recipient info form",
+            "match": {
+              "location": "features\\step_definitions\\orderPhysCard.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16147900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I select the first country in the list",
+            "match": {
+              "location": "features\\step_definitions\\orderPhysCard.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66317299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I fill in the recipient Delivery address form",
+            "match": {
+              "location": "features\\step_definitions\\orderPhysCard.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54551500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I select the first delivery method",
+            "match": {
+              "location": "features\\step_definitions\\orderPhysCard.js:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44586600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I click \"Next\" to go to the static password",
+            "match": {
+              "location": "features\\step_definitions\\orderPhysCard.js:96"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32453900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I fill a static password",
+            "match": {
+              "location": "features\\step_definitions\\orderPhysCard.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7190300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I click \"Next\" to go to the final modal",
+            "match": {
+              "location": "features\\step_definitions\\orderPhysCard.js:109"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24572000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I click \"Pay\" to complete the order",
+            "match": {
+              "location": "features\\step_definitions\\orderPhysCard.js:113"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 398394599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 320309800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should see a success message \"Card is ordered\"",
+            "match": {
+              "location": "features\\step_definitions\\common.steps.js:5"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5007808799,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (D:\\Work\\cucumber-playwright-tests\\node_modules\\@cucumber\\cucumber\\lib\\time.js:64:20)\n    at listOnTimeout (node:internal/timers:588:17)\n    at process.processTimers (node:internal/timers:523:7)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 107448000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "order-a-physical-card",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Order a physical card",
+    "tags": [],
+    "uri": "features\\orderPhysCard.feature"
+  },
+  {
+    "description": "  In order to transfer money\n  As a logged-in user\n  I want to be able to create a new payment",
+    "elements": [
+      {
+        "description": "",
+        "id": "payment-to-beneficiary;create-a-new-payment",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Create a new payment",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 197619500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1512326300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 280892699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 832661500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click on Send to create a new payment",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2370332099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I select the automation beneficiary",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 161805299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should see the payment form",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3968800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I enter payment amount \"10\"",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 202774999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I select the first purpose code",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 261822400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I enter reference \"trest\"",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6284100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I should the \"Sign the payment\" flag should be enabled by default",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6009600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I click Create and sign",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37352800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 321584600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I should see a success message \"Payment was created successfully\"",
+            "match": {
+              "location": "features\\step_definitions\\common.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1891399599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I should be on the home page",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3099300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should see the latest payment at current time",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1397899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 105618300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "payment-to-beneficiary",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Payment to beneficiary",
+    "tags": [],
+    "uri": "features\\payment.feature"
+  },
+  {
+    "description": "  In order to manage system access  \n  As an admin user  \n  I want to be able to create a report",
+    "elements": [
+      {
+        "description": "",
+        "id": "create-report;create-a-new-user-with-full-access",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Create a new user with full access",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 205195500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1531410800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 261800199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 825822400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I navigate to the Reports page",
+            "match": {
+              "location": "features\\step_definitions\\report.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2408231700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I click the \"Create report\" to get a report",
+            "match": {
+              "location": "features\\step_definitions\\report.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 636050600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I submit the create a report",
+            "match": {
+              "location": "features\\step_definitions\\report.steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28957699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should see a success message \"The report is ready! You can find it and download in Reports tab.\"",
+            "match": {
+              "location": "features\\step_definitions\\common.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1883975000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see a new report at current time",
+            "match": {
+              "location": "features\\step_definitions\\report.steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3012940600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 102677999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "create-report",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Create report",
+    "tags": [],
+    "uri": "features\\report.feature"
+  },
+  {
+    "description": "  In order to use the platform as a sub-user  \n  As a sub-user  \n  I want to be able to log in with my credentials  ",
+    "elements": [
+      {
+        "description": "",
+        "id": "sub-user-login;successful-login-as-sub-user",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Successful login as sub-user",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 198338899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1581267900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with sub-user credentials",
+            "match": {
+              "location": "features\\step_definitions\\subUserLogin.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 376961999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1337249100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should see the dashboard",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1846047600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 100484800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "sub-user-login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Sub-user login",
+    "tags": [],
+    "uri": "features\\subUserLogin.feature"
+  },
+  {
+    "description": "    In order to increase my account balance\n    As a logged-in user\n    I want to be able to top up my wallet from card",
+    "elements": [
+      {
+        "description": "",
+        "id": "top-up-from-card;create-a-new-top-up-from-card",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Create a new top up from card",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 200913599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1576934200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 277118700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 825383800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click the \"Top up\" on the page",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2392998200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I click \"Choose from list\" on the modal",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 150127599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I select \"AT 3326 GuruPay C2S\" in the dropdown",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35106599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click the \"Next\" on the page",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131093100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should see the \"How would you like to pay?\" on the modal window",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107376899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I select \"Top up from card\" method",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40501999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I enter top up amount \"10\" in field",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 102408699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I click \"Confirm\" on the modal window",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1836344900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I pay with test card",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66536000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I should see success payment screen",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3865509400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 114911700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "top-up-from-card",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Top up from card",
+    "tags": [],
+    "uri": "features\\topUpFromCard.feature"
+  },
+  {
+    "description": "    In order to increase my account balance\n    As a logged-in user\n    I want to be able to top up my wallet",
+    "elements": [
+      {
+        "description": "",
+        "id": "top-up-from-wallet;create-a-new-top-up-from-wallet",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Create a new top up from wallet",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 206554000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1520684499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 244703600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter the MFA code \"111111\"",
+            "match": {
+              "location": "features\\step_definitions\\mfa.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 832343600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click the \"Top up\" button",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromWallet.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2386289699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I click the \"Choose from list\" dropdown",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromWallet.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132770399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I select payment wallet \"AT 3326 GuruPay C2S\"",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromWallet.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35411800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click the \"Next\" button",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromWallet.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 115509900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should see the \"How would you like to pay?\" modal",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromWallet.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105791299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I select \"Top up from wallet\" payment method",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromWallet.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42222899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I enter top up amount \"10\"",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromWallet.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 90694199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I click the Wallet dropdown",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromWallet.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29156199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I select destination wallet \"AT 3318 Wallester\"",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromWallet.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33434600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I click the \"Confirm\" button",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromWallet.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112825500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I should see a success message \"You have successfully topped up your wallet\"",
+            "match": {
+              "location": "features\\step_definitions\\common.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1891885500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I should see transaction at current time",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromWallet.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3015209799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I should be on wallet page \"3326\"",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromWallet.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1194499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 103612800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "top-up-from-wallet",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Top up from wallet",
+    "tags": [],
+    "uri": "features\\topUpFromWallet.feature"
+  }
+]
