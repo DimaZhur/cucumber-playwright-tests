@@ -7,11 +7,11 @@ Before(async function () {
   this.page = await this.context.newPage();
 });
 
-// After(async function () {
-//   if (this.browser) {
-//     await this.browser.close();
-//   }
-// });
+After(async function () {
+  if (this.browser) {
+    await this.browser.close();
+  }
+});
 
 
 
