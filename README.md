@@ -9,12 +9,12 @@ git clone git@github.com:DimaZhur/cucumber-playwright-tests.git
 cd cucumber-playwright-tests
 ```
 
-2. Install dependencies
+### 2. Install dependencies
 ```bash
 npm install
 ```
 
-3. Run tests
+### 3. Run tests
 ```bash
 npm test
 ```
