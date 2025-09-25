@@ -96,8 +96,8 @@ Then('I should see success payment screen', async function () {
   const g2paySuccess = this.page.locator('text=Completed Successfully');
 
   await Promise.race([
-    finseiSuccess.waitFor({ state: 'visible', timeout: 50000 }),
-    g2paySuccess.waitFor({ state: 'visible', timeout: 50000 })
+    finseiSuccess.waitFor({ state: 'visible', timeout: 5000 }),
+    g2paySuccess.waitFor({ state: 'visible', timeout: 5000 })
   ]);
 
   if (await finseiSuccess.isVisible()) {
