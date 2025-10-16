@@ -12,11 +12,11 @@ Feature: Payment to beneficiary
     And I click on Send to create a new payment
     And I select the automation beneficiary
     Then I should see the payment form
-    And I enter payment amount "10"
-    And I select the first purpose code
+    And I enter payment amount "9.9"
+    # And I select the first purpose code
     # And I open the wallet drop down list to select a wallet
     # And I select wallet "AT 3326 GuruPay C2S"
-    And I enter reference "trest"
+    And I enter reference "Payment to beneficiary (auto test)"
     And I should the "Sign the payment" flag should be enabled by default
     And I click Create and sign
     And I enter the MFA code "111111"

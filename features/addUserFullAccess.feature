@@ -12,7 +12,7 @@ Background:
 Scenario: Create a new user with full access  
     When I navigate to the Users page
     When I click on "Add user" to create a user
-    When I fill a user info in the form
+    When I fill a user info in the form with name "A test user"
     When I click Add user
     And I enter the MFA code "111111"
     Then I should see a success message "User created"

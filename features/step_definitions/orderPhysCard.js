@@ -92,6 +92,8 @@ When('I select the first delivery method', async function () {
   await option.click();
 });
 
+
+
 // Клик по кнопке Next
 When('I click {string} to go to the static password', async function (buttonText) {
   await this.page.getByRole('button', { name: buttonText }).click();
@@ -108,6 +110,22 @@ When('I fill a static password', async function () {
 // Клик по кнопке Next
 When('I click {string} to go to the final modal', async function (buttonText) {
   await this.page.getByRole('button', { name: buttonText }).click();
+});
+
+// Открываем дропдаун выбора кошелька
+When('I open the payment wallet dropdown', async function () {
+  const dropdownTrigger = this.page.locator('div.dropdown-item >> span.placeholder');
+  await expect(dropdownTrigger).toBeVisible({ timeout: 5000 });
+  await dropdownTrigger.click();
+  console.log('Payment wallet dropdown opened');
+});
+
+//Выбираем карту для оплаты доставки
+When('I click on {string} wallet for to pay for delivery', async function (walletName) {
+  const walletSelector = `//div[contains(@class,"wallet-balanced-helper-label") and normalize-space(text())="${walletName}"]`;
+  await this.page.waitForSelector(walletSelector, { timeout: 10000 });
+  await this.page.click(walletSelector);
+  console.log(`Wallet "${walletName}" selected in exchange`);
 });
 
 When('I click "Pay" to complete the order', async function () {

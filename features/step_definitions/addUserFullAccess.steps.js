@@ -13,9 +13,10 @@ When('I click on {string} to create a user', async function (buttonText) {
 });
 
 // Заполняем данные юзера (в имени дата и время создания)
-When('I fill a user info in the form', async function () {
+When('I fill a user info in the form with name {string}', async function (userName) {
   const modal = this.page.locator('form.modal');
   await expect(modal).toBeVisible({ timeout: 10000 });
+  console.log('Modal is visible, starting to fill the form');
 
   // Формируем метку времени до минут
   const now = new Date();
@@ -24,26 +25,34 @@ When('I fill a user info in the form', async function () {
   const day = String(now.getDate()).padStart(2, '0');
   const hours = String(now.getHours()).padStart(2, '0');
   const minutes = String(now.getMinutes()).padStart(2, '0');
-  const formattedTime = `${year}-${month}-${day} ${hours}:${minutes}`;
+  const formattedTime = `${year}-${month}-${day}_${hours}:${minutes}`;
 
   // Имя с меткой времени
-  this.latestUserName = `A test user ${formattedTime}`;
-  await this.page.getByPlaceholder('Name').fill(this.latestUserName);
+  this.latestUserName = `${userName}_${formattedTime}`;
+  await modal.getByPlaceholder('Name').fill(this.latestUserName);
+  console.log(`Filled Name: ${this.latestUserName}`);
 
   // Генерируем email
   const randomEmail = `user_${Date.now()}@test.com`;
   this.latestUserEmail = randomEmail;
-  await this.page.getByPlaceholder('Email').fill(randomEmail);
+  await modal.getByPlaceholder('Email').fill(randomEmail);
+  console.log(`Filled Email: ${randomEmail}`);
 
   // Телефон
-  await this.page.getByPlaceholder('Phone number').fill('48556666777');
+  await modal.getByPlaceholder('Phone number').fill('48556666777');
+  console.log('Filled Phone');
 
-  // Открыть дропдаун
-  await this.page.locator('text=Access options').click();
+  // Открыть дропдаун Access options
+  await modal.locator('text=Access options').click();
+  await this.page.waitForTimeout(300); // короткая пауза, чтобы список успел открыться
 
-  // Кликнуть по "Full access"
-  await this.page.locator('.dropdown-list-item', { hasText: 'Full access' }).click();
+  // Кликнуть "Full access"
+  await modal.locator('.dropdown-list-item', { hasText: 'Full access' }).click();
+  console.log('Selected Full access');
+
+  console.log('User data filled successfully');
 });
+
 
 
 // Нажимаем на кнопку Add user
@@ -63,7 +72,10 @@ When('I click Add user', async function () {
 //Проверяем, что новый юзер отображается
 Then('I should see the new user at the top of the list', async function () {
   const firstUser = this.page.locator('p.item-name.text-overflow').first();
+  
   await expect(firstUser).toHaveText(this.latestUserName, { timeout: 15000 });
+  
+  console.log(`Found new user: ${this.latestUserName}`);
 });
 
 

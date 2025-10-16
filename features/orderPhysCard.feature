@@ -20,6 +20,8 @@ Scenario: Create a new physical card
     And I click "Next" to go to the static password
     When I fill a static password
     And I click "Next" to go to the final modal
+    And I open the payment wallet dropdown
+    And I click on "7164_IFX_EUR" wallet for to pay for delivery
     And I click "Pay" to complete the order
     And I enter the MFA code "111111"
     Then I should see a success message "Card was successfully ordered."

@@ -50,18 +50,21 @@ When('I click the {string} button for logout', async function (buttonText) {
 });
 
 //Логинимся заново
-When('I am on login page', async function () {
-  await this.page.goto('https://master.d28udzev6nhcm4.amplifyapp.com/auth/login');
-});
-
-When('I login again', async function () {
+When('I login again on {string} with email {string} and password {string}', async function (loginUrl, email, password) {
+  // Открываем страницу логина
+  await this.page.goto(loginUrl);
   await this.page.waitForSelector('input[placeholder="Email"]');
-  await this.page.fill('input[placeholder="Email"]', 'd.zhurauleu+95@altpay.uk');
-  await this.page.fill('input[placeholder="Password"]', '111111zZx!');
 
+  // Заполняем форму
+  await this.page.fill('input[placeholder="Email"]', email);
+  await this.page.fill('input[placeholder="Password"]', password);
+
+  // Нажимаем кнопку входа
   await this.page.click('button:has-text("Login")');
-  console.log('Login form submitted');
+
+  console.log(`Login form submitted on ${loginUrl} for user: ${email}`);
 });
+
 
 
 

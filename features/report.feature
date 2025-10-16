@@ -12,6 +12,7 @@ Background:
 Scenario: Create a new user with full access  
     When I navigate to the Reports page
     When I click the "Create report" to get a report
+    When I fill the report name with "Atest report"
     When I submit the create a report
     Then I should see a success message "The report is ready! You can find it and download in Reports tab."
     Then I should see a new report at current time

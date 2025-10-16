@@ -8,14 +8,13 @@ When('I click on Send to create a new payment', async function () {
 
 // Выбор беника
 When('I select the automation beneficiary', async function () {
-  const beneficiary = this.page.locator('div:has-text("AAutomation") >> text=BE14897323524683');
+  const iban = 'NL67RABO8973442368';
+  const beneficiary = this.page.locator(`div.target-data-subtitle:text("${iban}")`);
   await expect(beneficiary).toBeVisible({ timeout: 10000 });
   await beneficiary.click();
 });
 
-
-
-
+// Проверка наличия формы оплаты
 Then('I should see the payment form', async function () {
   await this.page.waitForSelector('text=Transfer', { timeout: 10000 });
   console.log('Payment form is visible');
@@ -28,19 +27,21 @@ When('I enter payment amount {string}', async function (amount) {
   console.log(`Entered amount: ${amount}`);
 });
 
-When('I select the first purpose code', async function () {
-  // Открываем дропдаун Purpose code
-  await this.page.locator('label:has-text("Purpose code") .dropdown').click();
 
-  // Находим первый элемент в списке
-  const firstOption = this.page.locator('.dropdown-list-item').first();
+// Purpose code
+// When('I select the first purpose code', async function () {
+//   // Открываем дропдаун Purpose code
+//   await this.page.locator('label:has-text("Purpose code") .dropdown').click();
 
-  // Ждём пока он появится
-  await expect(firstOption).toBeVisible({ timeout: 5000 });
+//   // Находим первый элемент в списке
+//   const firstOption = this.page.locator('.dropdown-list-item').first();
 
-  // Кликаем
-  await firstOption.click();
-});
+//   // Ждём пока он появится
+//   await expect(firstOption).toBeVisible({ timeout: 5000 });
+
+//   // Кликаем
+//   await firstOption.click();
+// });
 
 // Открываем дропдаун по клику на "EUR"
 // When('I open the wallet drop down list to select a wallet', async function () {
@@ -49,15 +50,16 @@ When('I select the first purpose code', async function () {
 //   console.log('Wallet dropdown opened by clicking EUR');
 // });
 
-// // Выбираем валлет AT 3326 GuruPay C2S
+// // Выбираем валлет
 // When('I select wallet "AT 3326 GuruPay C2S"', async function () {
 //   await this.page.click('text=AT 3326 GuruPay C2S');
 // });
 
 // Вводим reference
-When('I enter reference "trest"', async function () {
-  await this.page.fill('textarea[placeholder="Reference"]', 'trest');
+When('I enter reference {string}', async function (referenceText) {
+  await this.page.fill('textarea[placeholder="Reference"]', referenceText);
 });
+
 
 // Проверяем, что чекбокс "When creating, sign the payment" включен по умолчанию
 Then('I should the "Sign the payment" flag should be enabled by default', async function () {

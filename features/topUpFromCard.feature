@@ -11,7 +11,7 @@ Background:
     Scenario: Create a new top up from card
     When I click the "Top up" on the page
     And I click "Choose from list" on the modal
-    And I select "AT 3326 GuruPay C2S" in the dropdown
+    And I select "7163_GuruPay_EUR" in the dropdown
     And I click the "Next" on the page
     Then I should see the "How would you like to pay?" on the modal window
     And I select "Top up from card" method

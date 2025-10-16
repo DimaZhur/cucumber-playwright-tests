@@ -32,25 +32,24 @@ When('I select currency {string} on the modal', async function (currency) {
   await this.page.click(`div.dropdown-list-item:has-text("${currency}")`);
 });
 
-// Заполняем данные беника
-When('I fill a company beneficiary info in the form', async function () {
+// Заполняем данные для company-бенефициара
+When('I fill a company beneficiary info in the form with name {string}', async function (beneficiaryName) {
+  await expect(this.page.locator('form')).toBeVisible({ timeout: 10000 });
 
- // Название компании
-  await this.page.getByPlaceholder('Company name').fill('Test company auto');
-
-  // Template name с указанием текущего времени (до минут)
+  // Форматируем дату как "YYYY-MM-DD HH:mm"
   const now = new Date();
   const year = now.getFullYear();
   const month = String(now.getMonth() + 1).padStart(2, '0');
   const day = String(now.getDate()).padStart(2, '0');
   const hours = String(now.getHours()).padStart(2, '0');
   const minutes = String(now.getMinutes()).padStart(2, '0');
-
   const formattedTime = `${year}-${month}-${day} ${hours}:${minutes}`;
 
-  this.latestBenName = `A test ben company ${formattedTime}`;
-
+  // Формируем имя с нужным форматом времени
+  this.latestBenName = `${beneficiaryName} ${formattedTime}`;
+  await this.page.getByPlaceholder('Company name').fill(this.latestBenName);
   await this.page.getByPlaceholder('Template name').fill(this.latestBenName);
+  console.log(`Company beneficiary filled: ${this.latestBenName}`);
 });
 
 //Вводим IBAN

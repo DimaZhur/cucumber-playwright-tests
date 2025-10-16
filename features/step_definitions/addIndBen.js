@@ -27,28 +27,28 @@ When('I select currency {string}', async function (currency) {
   await this.page.click(`div.dropdown-list-item:has-text("${currency}")`);
 });
 
-// Заполняем данные беника
-When('I fill a beneficiary info in the form', async function () {
-
-  // Имя
+// Заполняем данные individual-бенефициара
+When('I fill a individual beneficiary info in the form with name {string}', async function (beneficiaryName) {
+  // Имя и фамилия
   await this.page.getByPlaceholder('First name').fill('A test');
+  await this.page.getByPlaceholder('Last name').fill('Test-auto');
 
-  // Фамилия
-  await this.page.getByPlaceholder('Last name').fill('Test auto');
-
-  // Template name с указанием текущего времени (до минут)
+  // Формат даты: 2025-10-16 10:22
   const now = new Date();
   const year = now.getFullYear();
   const month = String(now.getMonth() + 1).padStart(2, '0');
   const day = String(now.getDate()).padStart(2, '0');
   const hours = String(now.getHours()).padStart(2, '0');
   const minutes = String(now.getMinutes()).padStart(2, '0');
-
   const formattedTime = `${year}-${month}-${day} ${hours}:${minutes}`;
 
-  this.latestBenName = `A test ben ${formattedTime}`;
+  // Формируем уникальное имя
+  this.latestBenName = `${beneficiaryName} ${formattedTime}`;
 
+  // Заполняем Template name
   await this.page.getByPlaceholder('Template name').fill(this.latestBenName);
+
+  console.log(`Individual beneficiary filled: ${this.latestBenName}`);
 });
 
 //Вводим IBAN

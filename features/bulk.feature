@@ -14,9 +14,9 @@ Scenario: Create a new Bulk
     When I select "SEPA Transfer"
     When I upload the file "SEPA bulk payment valid.csv"
     When I open the wallet dropdown
-    And I click on wallet "AT 3326 GuruPay C2S"
+    And I click on wallet "7163_GuruPay_EUR"
     And I click "Next" to proceed to the next step
     And I click "Confirm" to finish
     And I should see bulk payment "- 6,99 EUR" at current time
-    And I should be on I should be on the page of the wallet "3326" that was used
+    And I should be on I should be on the page of the wallet "7163" that was used
 

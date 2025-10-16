@@ -55,9 +55,9 @@ When('I open the wallet dropdown', async function () {
   await field.click();
 });
 
-// Выбираем валлет AT 3326 GuruPay C2S
-When('I click on wallet "AT 3326 GuruPay C2S"', async function () {
-  await this.page.click('text=AT 3326 GuruPay C2S');
+// Выбираем валлет
+When('I click on wallet {string}', async function (walletName) {
+  await this.page.getByText(walletName, { exact: true }).click();
 });
 
 // Клик по кнопке Next

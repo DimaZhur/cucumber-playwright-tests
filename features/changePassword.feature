@@ -17,8 +17,10 @@ Scenario: Successfully change password
   And I enter the MFA code "111111"
   Then I should see a success message "Password was successfully changed!"
   And I click the "Logout" button for logout
-  When I am on login page
-  When I login again
+  # When I am on login page
+  # When I login again
+  When I login again on "https://master.d28udzev6nhcm4.amplifyapp.com/auth/login" with email "d.zhurauleu+900@altpay.uk" and password "111111zZx!"
+
   And I enter the MFA code "111111" 
   When I click on the profile avatar on the home page
   And I select Settings in the profile menu

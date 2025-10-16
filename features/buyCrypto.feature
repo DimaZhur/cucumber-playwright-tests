@@ -16,7 +16,7 @@ When I select "TRC20" network in Buy Crypto form
 When I enter "TKSXDA8HfE9E1y39RczVQ1ZascUEtaSToF" as crypto wallet address
 When I enter "10" as amount in Buy Crypto form
 And I click the Wallet list
-When I select wallet "AT 3326 GuruPay C2S" in Buy Crypto form
+When I select wallet "7163_GuruPay_EUR" in Buy Crypto form
 When I submit the Buy Crypto form
 And I enter the MFA code "111111"
 Then I should see a success message "Payment has been executed successfully!"

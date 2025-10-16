@@ -34,7 +34,7 @@ When('I open the wallets dropdown in exchange', async function () {
   console.log('Wallet dropdown opened (top EUR block)');
 });
 
-// Выбираем исходный кошелёк по названию (верхний Wallet)
+// Выбираем исходный кошелёк по названию ("7164_IFX_EUR")
 When('I select wallet {string} in exchange', async function (walletName) {
   const walletSelector = `//div[contains(@class,"wallet-balanced-helper-label") and normalize-space(text())="${walletName}"]`;
   await this.page.waitForSelector(walletSelector, { timeout: 10000 });

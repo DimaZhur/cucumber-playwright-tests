@@ -18,6 +18,29 @@ When('I click the {string} to get a report', async function (buttonText) {
   await this.page.waitForTimeout(500);
 });
 
+//Даем название репорту
+When('I fill the report name with {string}', async function (baseName) {
+  // Получаем текущее время
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+
+  // Формируем имя в нужном формате
+  const reportName = `${baseName} ${year}-${month}-${day} ${hours}:${minutes}`;
+
+  // Заполняем поле Name (optional)
+  const nameField = this.page.locator('input[placeholder="Name (optional)"]');
+  await nameField.fill(reportName);
+
+  // Сохраняем в контексте, чтобы использовать в следующих шагах
+  this.latestReportName = reportName;
+
+  console.log(`📝 Report name filled: ${reportName}`);
+});
+
 // Нажатие на кнопку Create report для завершения создания отчета
 When('I submit the create a report', async function () {
   const submitButton = this.page.locator('#modals button:has-text("Create report")');

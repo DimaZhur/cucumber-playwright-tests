@@ -14,7 +14,6 @@ When('I click on the Buy Crypto action', async function () {
 });
 
 // Клик по выпадашке "Select network" и выбор первого элемента (TRC 20)
-
 When('I select {string} network in Buy Crypto form', async function (network) {
   // Открыть дропдаун
   await this.page.locator('.modal .dropdown-size-bg').first().click();

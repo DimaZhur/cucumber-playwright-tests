@@ -13,7 +13,7 @@ Scenario: Create a new individual beneficiary
     When I navigate to the Beneficiaries page
     When I click on "Add beneficiary" to create a beneficiary
     When I select currency "EUR"
-    When I fill a beneficiary info in the form
+    When I fill a individual beneficiary info in the form with name "A test individual ben"
     When I fill IBAN field with random Austrian IBAN
     When I click Add beneficiary
     Then I should see a success message "Beneficiary has been created"
