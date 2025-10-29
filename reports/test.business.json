@@ -14,7 +14,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 223613200
+              "duration": 144499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 148349399
             }
           },
           {
@@ -23,11 +31,11 @@
             "line": 7,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1509901800
+              "duration": 1686907700
             }
           },
           {
@@ -36,24 +44,24 @@
             "line": 8,
             "name": "I login with valid credentials",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:8"
+              "location": "features\\step_definitions\\login.steps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 312357100
+              "duration": 46615400
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1356864200
+              "duration": 1355206200
             }
           },
           {
@@ -66,7 +74,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1360471699
+              "duration": 2893341099
             }
           },
           {
@@ -79,7 +87,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 247226199
+              "duration": 398344500
             }
           },
           {
@@ -92,7 +100,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 231476300
+              "duration": 231689200
             }
           },
           {
@@ -105,7 +113,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 70322200
+              "duration": 87008700
             }
           },
           {
@@ -118,7 +126,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 14739999
+              "duration": 17698000
             }
           },
           {
@@ -131,7 +139,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4913700
+              "duration": 5682999
             }
           },
           {
@@ -144,7 +152,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 911223699
+              "duration": 388505999
             }
           },
           {
@@ -157,7 +165,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 362566200
+              "duration": 397691200
             }
           },
           {
@@ -170,7 +178,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1999399
+              "duration": 3487900
             }
           },
           {
@@ -178,7 +186,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 132037999
+              "duration": 15380600
             }
           }
         ],
@@ -208,7 +216,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 208625399
+              "duration": 32300
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 45282499
             }
           },
           {
@@ -217,11 +233,11 @@
             "line": 7,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 796448600
+              "duration": 1762162800
             }
           },
           {
@@ -230,24 +246,24 @@
             "line": 8,
             "name": "I login with valid credentials",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:8"
+              "location": "features\\step_definitions\\login.steps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 301206599
+              "duration": 43502000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1342723200
+              "duration": 1342758400
             }
           },
           {
@@ -260,7 +276,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1860665200
+              "duration": 2875254599
             }
           },
           {
@@ -273,7 +289,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 264831299
+              "duration": 431432700
             }
           },
           {
@@ -286,7 +302,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 250140799
+              "duration": 268452499
             }
           },
           {
@@ -299,7 +315,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 15391400
+              "duration": 18767099
             }
           },
           {
@@ -312,7 +328,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4976500
+              "duration": 4974099
             }
           },
           {
@@ -325,7 +341,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 377935600
+              "duration": 389242500
             }
           },
           {
@@ -338,7 +354,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 362488399
+              "duration": 405816999
             }
           },
           {
@@ -351,7 +367,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1702599
+              "duration": 2333000
             }
           },
           {
@@ -359,7 +375,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 130560100
+              "duration": 13523199
             }
           }
         ],
@@ -389,7 +405,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 197263800
+              "duration": 25399
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 47815000
             }
           },
           {
@@ -398,11 +422,11 @@
             "line": 7,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1601842899
+              "duration": 1839669000
             }
           },
           {
@@ -411,24 +435,24 @@
             "line": 8,
             "name": "I login with valid credentials",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:8"
+              "location": "features\\step_definitions\\login.steps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 310550599
+              "duration": 42001599
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1333532600
+              "duration": 1367858200
             }
           },
           {
@@ -441,7 +465,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1868607799
+              "duration": 2881438600
             }
           },
           {
@@ -454,7 +478,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 231805599
+              "duration": 232278099
             }
           },
           {
@@ -467,7 +491,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 750191899
+              "duration": 767392600
             }
           },
           {
@@ -476,24 +500,24 @@
             "line": 16,
             "name": "I click Add user",
             "match": {
-              "location": "features\\step_definitions\\addUserFullAccess.steps.js:59"
+              "location": "features\\step_definitions\\addUserFullAccess.steps.js:61"
             },
             "result": {
               "status": "passed",
-              "duration": 753426500
+              "duration": 775531100
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 17,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 22450400
+              "duration": 22657999
             }
           },
           {
@@ -506,7 +530,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 890556700
+              "duration": 884146099
             }
           },
           {
@@ -515,11 +539,11 @@
             "line": 19,
             "name": "I should see the new user at the top of the list",
             "match": {
-              "location": "features\\step_definitions\\addUserFullAccess.steps.js:73"
+              "location": "features\\step_definitions\\addUserFullAccess.steps.js:75"
             },
             "result": {
               "status": "passed",
-              "duration": 1487699
+              "duration": 2158400
             }
           },
           {
@@ -527,7 +551,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 127902600
+              "duration": 13776300
             }
           }
         ],
@@ -557,7 +581,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 201502899
+              "duration": 25200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 47897899
             }
           },
           {
@@ -566,11 +598,11 @@
             "line": 7,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1528062300
+              "duration": 1877481100
             }
           },
           {
@@ -579,24 +611,24 @@
             "line": 8,
             "name": "I login with valid credentials",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:8"
+              "location": "features\\step_definitions\\login.steps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 243456399
+              "duration": 39154200
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1337636399
+              "duration": 1347404300
             }
           },
           {
@@ -609,7 +641,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1883049500
+              "duration": 2889603800
             }
           },
           {
@@ -622,7 +654,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 118236799
+              "duration": 114381300
             }
           },
           {
@@ -635,7 +667,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 80381500
+              "duration": 82120500
             }
           },
           {
@@ -648,7 +680,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4414499
+              "duration": 5171099
             }
           },
           {
@@ -661,20 +693,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 912743600
+              "duration": 893613699
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 17,
-            "name": "I click on wallet \"7163_GuruPay_EUR\"",
+            "name": "I click on wallet \"GURUPAY_EUR\"",
             "match": {
-              "location": "features\\step_definitions\\bulk.steps.js:59"
+              "location": "features\\step_definitions\\bulk.steps.js:60"
             },
             "result": {
               "status": "passed",
-              "duration": 32924200
+              "duration": 33181799
             }
           },
           {
@@ -683,11 +715,11 @@
             "line": 18,
             "name": "I click \"Next\" to proceed to the next step",
             "match": {
-              "location": "features\\step_definitions\\bulk.steps.js:64"
+              "location": "features\\step_definitions\\bulk.steps.js:83"
             },
             "result": {
               "status": "passed",
-              "duration": 32269099
+              "duration": 32269399
             }
           },
           {
@@ -696,11 +728,11 @@
             "line": 19,
             "name": "I click \"Confirm\" to finish",
             "match": {
-              "location": "features\\step_definitions\\bulk.steps.js:69"
+              "location": "features\\step_definitions\\bulk.steps.js:88"
             },
             "result": {
               "status": "passed",
-              "duration": 31620899
+              "duration": 31280199
             }
           },
           {
@@ -709,25 +741,24 @@
             "line": 20,
             "name": "I should see bulk payment \"- 6,99 EUR\" at current time",
             "match": {
-              "location": "features\\step_definitions\\bulk.steps.js:74"
+              "location": "features\\step_definitions\\bulk.steps.js:93"
             },
             "result": {
-              "status": "failed",
-              "duration": 5005037499,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (D:\\Work\\cucumber-playwright-tests\\node_modules\\@cucumber\\cucumber\\lib\\time.js:64:20)\n    at listOnTimeout (node:internal/timers:588:17)\n    at process.processTimers (node:internal/timers:523:7)"
+              "status": "passed",
+              "duration": 3015988899
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 21,
-            "name": "I should be on I should be on the page of the wallet \"7163\" that was used",
+            "name": "I should be on the page of the wallet that was used",
             "match": {
-              "location": "features\\step_definitions\\bulk.steps.js:94"
+              "location": "features\\step_definitions\\bulk.steps.js:112"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 5173399
             }
           },
           {
@@ -735,7 +766,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 104466600
+              "duration": 13540600
             }
           }
         ],
@@ -765,7 +796,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 220484300
+              "duration": 24099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 47584000
             }
           },
           {
@@ -774,11 +813,11 @@
             "line": 8,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1596935799
+              "duration": 1799624700
             }
           },
           {
@@ -787,24 +826,24 @@
             "line": 9,
             "name": "I login with valid credentials",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:8"
+              "location": "features\\step_definitions\\login.steps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 230928200
+              "duration": 53955199
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 10,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1325277399
+              "duration": 1349510100
             }
           },
           {
@@ -817,7 +856,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1860994399
+              "duration": 2883551099
             }
           },
           {
@@ -830,7 +869,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 131506300
+              "duration": 132087299
             }
           },
           {
@@ -843,20 +882,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 350906900
+              "duration": 366286499
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 16,
-            "name": "I enter \"TKSXDA8HfE9E1y39RczVQ1ZascUEtaSToF\" as crypto wallet address",
+            "name": "I enter crypto wallet address in Buy Crypto form",
             "match": {
               "location": "features\\step_definitions\\buyCrypto.steps.js:30"
             },
             "result": {
               "status": "passed",
-              "duration": 5803399
+              "duration": 5939400
             }
           },
           {
@@ -865,11 +904,11 @@
             "line": 17,
             "name": "I enter \"10\" as amount in Buy Crypto form",
             "match": {
-              "location": "features\\step_definitions\\buyCrypto.steps.js:36"
+              "location": "features\\step_definitions\\buyCrypto.steps.js:52"
             },
             "result": {
               "status": "passed",
-              "duration": 7303800
+              "duration": 6130799
             }
           },
           {
@@ -878,24 +917,24 @@
             "line": 18,
             "name": "I click the Wallet list",
             "match": {
-              "location": "features\\step_definitions\\buyCrypto.steps.js:42"
+              "location": "features\\step_definitions\\buyCrypto.steps.js:58"
             },
             "result": {
               "status": "passed",
-              "duration": 12155500
+              "duration": 12790499
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 19,
-            "name": "I select wallet \"7163_GuruPay_EUR\" in Buy Crypto form",
+            "name": "I select wallet from context in Buy Crypto form",
             "match": {
-              "location": "features\\step_definitions\\buyCrypto.steps.js:51"
+              "location": "features\\step_definitions\\buyCrypto.steps.js:67"
             },
             "result": {
               "status": "passed",
-              "duration": 3058589099
+              "duration": 43349499
             }
           },
           {
@@ -904,25 +943,24 @@
             "line": 20,
             "name": "I submit the Buy Crypto form",
             "match": {
-              "location": "features\\step_definitions\\buyCrypto.steps.js:63"
+              "location": "features\\step_definitions\\buyCrypto.steps.js:90"
             },
             "result": {
-              "status": "failed",
-              "duration": 5007865400,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (D:\\Work\\cucumber-playwright-tests\\node_modules\\@cucumber\\cucumber\\lib\\time.js:64:20)\n    at listOnTimeout (node:internal/timers:588:17)\n    at process.processTimers (node:internal/timers:523:7)"
+              "status": "passed",
+              "duration": 1033321100
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 21,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 24945699
             }
           },
           {
@@ -934,8 +972,8 @@
               "location": "features\\step_definitions\\common.steps.js:5"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 1893423499
             }
           },
           {
@@ -944,11 +982,11 @@
             "line": 23,
             "name": "I should be on the crypto page after buy crypto",
             "match": {
-              "location": "features\\step_definitions\\buyCrypto.steps.js:74"
+              "location": "features\\step_definitions\\buyCrypto.steps.js:101"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 1010611700
             }
           },
           {
@@ -957,11 +995,11 @@
             "line": 24,
             "name": "I should see buy crypto transaction \"- 10,00 EUR\" at current time",
             "match": {
-              "location": "features\\step_definitions\\buyCrypto.steps.js:87"
+              "location": "features\\step_definitions\\buyCrypto.steps.js:114"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 3008308299
             }
           },
           {
@@ -969,7 +1007,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 104310199
+              "duration": 11909599
             }
           }
         ],
@@ -999,7 +1037,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 209009999
+              "duration": 33600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 45850099
             }
           },
           {
@@ -1008,11 +1054,11 @@
             "line": 7,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1539711299
+              "duration": 1855669699
             }
           },
           {
@@ -1021,24 +1067,24 @@
             "line": 8,
             "name": "I login with valid credentials",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:8"
+              "location": "features\\step_definitions\\login.steps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 261661499
+              "duration": 44400600
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1347214500
+              "duration": 1352154600
             }
           },
           {
@@ -1051,7 +1097,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1852055399
+              "duration": 3895875699
             }
           },
           {
@@ -1064,7 +1110,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 37695200
+              "duration": 35691500
             }
           },
           {
@@ -1077,7 +1123,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 130076000
+              "duration": 130852599
             }
           },
           {
@@ -1090,33 +1136,33 @@
             },
             "result": {
               "status": "passed",
-              "duration": 117149000
+              "duration": 116776099
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 16,
-            "name": "I change password from \"111111zZ!\" to \"111111zZx!\"",
+            "name": "I change password from \"PASSWORD1\" to \"PASSWORD2\"",
             "match": {
-              "location": "features\\step_definitions\\changePassword.steps.js:35"
+              "location": "features\\step_definitions\\changePassword.steps.js:34"
             },
             "result": {
               "status": "passed",
-              "duration": 132971900
+              "duration": 133905700
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 17,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 836249300
+              "duration": 1851970900
             }
           },
           {
@@ -1129,7 +1175,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 890515700
+              "duration": 1889542099
             }
           },
           {
@@ -1138,128 +1184,128 @@
             "line": 19,
             "name": "I click the \"Logout\" button for logout",
             "match": {
-              "location": "features\\step_definitions\\changePassword.steps.js:46"
+              "location": "features\\step_definitions\\changePassword.steps.js:51"
             },
             "result": {
               "status": "passed",
-              "duration": 49248899
+              "duration": 32437100
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 22,
-            "name": "I login again on \"https://master.d28udzev6nhcm4.amplifyapp.com/auth/login\" with email \"d.zhurauleu+900@altpay.uk\" and password \"111111zZx!\"",
+            "name": "I login again",
             "match": {
-              "location": "features\\step_definitions\\changePassword.steps.js:53"
+              "location": "features\\step_definitions\\changePassword.steps.js:59"
             },
             "result": {
               "status": "passed",
-              "duration": 258963700
+              "duration": 276133699
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 24,
-            "name": "I enter the MFA code \"111111\"",
+            "line": 23,
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1332930899
+              "duration": 1864238600
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 25,
+            "line": 24,
             "name": "I click on the profile avatar on the home page",
             "match": {
               "location": "features\\step_definitions\\changePassword.steps.js:8"
             },
             "result": {
               "status": "passed",
-              "duration": 1850697999
+              "duration": 3883499699
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 26,
+            "line": 25,
             "name": "I select Settings in the profile menu",
             "match": {
               "location": "features\\step_definitions\\changePassword.steps.js:15"
             },
             "result": {
               "status": "passed",
-              "duration": 37715600
+              "duration": 36705200
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 27,
+            "line": 26,
             "name": "I click on the password tab",
             "match": {
               "location": "features\\step_definitions\\changePassword.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 129696400
+              "duration": 113598199
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 28,
+            "line": 27,
             "name": "I click the \"Change password\" on the change password page",
             "match": {
               "location": "features\\step_definitions\\changePassword.steps.js:29"
             },
             "result": {
               "status": "passed",
-              "duration": 117691899
+              "duration": 116618199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "I change password from \"PASSWORD2\" to \"PASSWORD1\"",
+            "match": {
+              "location": "features\\step_definitions\\changePassword.steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132294900
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 29,
-            "name": "I change password from \"111111zZx!\" to \"111111zZ!\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\changePassword.steps.js:35"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 132657699
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 30,
-            "name": "I enter the MFA code \"111111\"",
-            "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 836319499
+              "duration": 1342362200
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 31,
+            "line": 30,
             "name": "I should see a success message \"Password was successfully changed!\"",
             "match": {
               "location": "features\\step_definitions\\common.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 885591000
+              "duration": 881275699
             }
           },
           {
@@ -1267,7 +1313,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 116543399
+              "duration": 13298500
             }
           }
         ],
@@ -1297,7 +1343,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 203417699
+              "duration": 25899
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 45805399
             }
           },
           {
@@ -1306,11 +1360,11 @@
             "line": 7,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1545619299
+              "duration": 1845309899
             }
           },
           {
@@ -1319,24 +1373,24 @@
             "line": 8,
             "name": "I login with valid credentials",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:8"
+              "location": "features\\step_definitions\\login.steps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 250504200
+              "duration": 55659500
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1328918100
+              "duration": 1840522700
             }
           },
           {
@@ -1349,7 +1403,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1857511700
+              "duration": 2894865400
             }
           },
           {
@@ -1362,7 +1416,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 355356800
+              "duration": 359410600
             }
           },
           {
@@ -1375,7 +1429,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 9173999
+              "duration": 8578299
             }
           },
           {
@@ -1388,20 +1442,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 56688800
+              "duration": 31616899
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 16,
-            "name": "I select wallet \"7165_IFX_USD\" in exchange",
+            "name": "I select wallet \"IFX_USD\" from context in exchange",
             "match": {
               "location": "features\\step_definitions\\exchange.steps.js:38"
             },
             "result": {
               "status": "passed",
-              "duration": 46919399
+              "duration": 54966099
             }
           },
           {
@@ -1410,24 +1464,24 @@
             "line": 17,
             "name": "I open the destination wallets dropdown in exchange",
             "match": {
-              "location": "features\\step_definitions\\exchange.steps.js:46"
+              "location": "features\\step_definitions\\exchange.steps.js:58"
             },
             "result": {
               "status": "passed",
-              "duration": 114086800
+              "duration": 125157899
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 18,
-            "name": "I select destination wallet \"7164_IFX_EUR\" in exchange",
+            "name": "I select destination wallet \"IFX_EUR\" from context in exchange",
             "match": {
-              "location": "features\\step_definitions\\exchange.steps.js:54"
+              "location": "features\\step_definitions\\exchange.steps.js:66"
             },
             "result": {
               "status": "passed",
-              "duration": 134083400
+              "duration": 152315399
             }
           },
           {
@@ -1436,24 +1490,24 @@
             "line": 19,
             "name": "I submit the exchange form",
             "match": {
-              "location": "features\\step_definitions\\exchange.steps.js:62"
+              "location": "features\\step_definitions\\exchange.steps.js:86"
             },
             "result": {
               "status": "passed",
-              "duration": 544600200
+              "duration": 534110300
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 20,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 26160000
+              "duration": 31946599
             }
           },
           {
@@ -1466,7 +1520,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 882323000
+              "duration": 1881568099
             }
           },
           {
@@ -1475,11 +1529,11 @@
             "line": 22,
             "name": "I should be on the home page after exchange",
             "match": {
-              "location": "features\\step_definitions\\exchange.steps.js:73"
+              "location": "features\\step_definitions\\exchange.steps.js:97"
             },
             "result": {
               "status": "passed",
-              "duration": 2655799
+              "duration": 2848599
             }
           },
           {
@@ -1488,11 +1542,11 @@
             "line": 23,
             "name": "I should see the latest exchange transaction \"Currency exchange 10.00 USD to EUR\" at current time",
             "match": {
-              "location": "features\\step_definitions\\exchange.steps.js:80"
+              "location": "features\\step_definitions\\exchange.steps.js:104"
             },
             "result": {
               "status": "passed",
-              "duration": 3004677400
+              "duration": 3010091000
             }
           },
           {
@@ -1500,7 +1554,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 104857299
+              "duration": 11208699
             }
           }
         ],
@@ -1530,7 +1584,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 204679600
+              "duration": 28099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 47317899
             }
           },
           {
@@ -1539,11 +1601,11 @@
             "line": 7,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1600387500
+              "duration": 1774225300
             }
           },
           {
@@ -1552,24 +1614,24 @@
             "line": 8,
             "name": "I login with sub-user credentials",
             "match": {
-              "location": "features\\step_definitions\\subUserLogin.steps.js:6"
+              "location": "features\\step_definitions\\subUserLogin.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 266567200
+              "duration": 52782599
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1324767999
+              "duration": 1833804999
             }
           },
           {
@@ -1582,7 +1644,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1857673599
+              "duration": 2396197399
             }
           },
           {
@@ -1595,7 +1657,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 37041799
+              "duration": 35811499
             }
           },
           {
@@ -1608,7 +1670,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 130404199
+              "duration": 131459100
             }
           },
           {
@@ -1621,7 +1683,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 151608600
+              "duration": 151394599
             }
           },
           {
@@ -1634,7 +1696,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 93118000
+              "duration": 101674200
             }
           },
           {
@@ -1647,7 +1709,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8729299
+              "duration": 7008599
             }
           },
           {
@@ -1660,20 +1722,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 540236300
+              "duration": 543364000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 19,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 29541299
+              "duration": 21611799
             }
           },
           {
@@ -1686,7 +1748,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 844170599
+              "duration": 818148499
             }
           },
           {
@@ -1699,7 +1761,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 37429300
+              "duration": 42818700
             }
           },
           {
@@ -1712,7 +1774,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4595600
+              "duration": 12578099
             }
           },
           {
@@ -1720,7 +1782,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 105584800
+              "duration": 11548899
             }
           }
         ],
@@ -1750,7 +1812,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 218561599
+              "duration": 76799
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 46564400
             }
           },
           {
@@ -1759,11 +1829,11 @@
             "line": 7,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1524996400
+              "duration": 1752399999
             }
           },
           {
@@ -1772,24 +1842,24 @@
             "line": 8,
             "name": "I login with valid credentials",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:8"
+              "location": "features\\step_definitions\\login.steps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 265114700
+              "duration": 39012100
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1331857100
+              "duration": 1337090199
             }
           },
           {
@@ -1798,11 +1868,11 @@
             "line": 10,
             "name": "I should see the dashboard",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:17"
+              "location": "features\\step_definitions\\login.steps.js:25"
             },
             "result": {
               "status": "passed",
-              "duration": 1846654299
+              "duration": 2837000400
             }
           },
           {
@@ -1810,7 +1880,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 114957399
+              "duration": 14649700
             }
           }
         ],
@@ -1840,7 +1910,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 196694999
+              "duration": 41900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 46397799
             }
           },
           {
@@ -1849,11 +1927,11 @@
             "line": 7,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1597143200
+              "duration": 1768774999
             }
           },
           {
@@ -1862,24 +1940,24 @@
             "line": 8,
             "name": "I login with valid credentials",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:8"
+              "location": "features\\step_definitions\\login.steps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 231012600
+              "duration": 45188300
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1333708999
+              "duration": 1342542600
             }
           },
           {
@@ -1892,7 +1970,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1869128499
+              "duration": 2859345999
             }
           },
           {
@@ -1905,7 +1983,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2466499
+              "duration": 2797800
             }
           },
           {
@@ -1914,11 +1992,11 @@
             "line": 14,
             "name": "I select \"Physical card\" option",
             "match": {
-              "location": "features\\step_definitions\\orderPhysCard.js:17"
+              "location": "features\\step_definitions\\orderPhysCard.js:15"
             },
             "result": {
               "status": "passed",
-              "duration": 813768300
+              "duration": 312928899
             }
           },
           {
@@ -1927,11 +2005,11 @@
             "line": 15,
             "name": "I click \"Next\" to proceed to data entry",
             "match": {
-              "location": "features\\step_definitions\\orderPhysCard.js:34"
+              "location": "features\\step_definitions\\orderPhysCard.js:32"
             },
             "result": {
               "status": "passed",
-              "duration": 34891399
+              "duration": 34009900
             }
           },
           {
@@ -1940,11 +2018,11 @@
             "line": 16,
             "name": "I fill in the recipient info form",
             "match": {
-              "location": "features\\step_definitions\\orderPhysCard.js:39"
+              "location": "features\\step_definitions\\orderPhysCard.js:37"
             },
             "result": {
               "status": "passed",
-              "duration": 18736400
+              "duration": 33881999
             }
           },
           {
@@ -1953,11 +2031,11 @@
             "line": 17,
             "name": "I select the first country in the list",
             "match": {
-              "location": "features\\step_definitions\\orderPhysCard.js:54"
+              "location": "features\\step_definitions\\orderPhysCard.js:57"
             },
             "result": {
               "status": "passed",
-              "duration": 63665599
+              "duration": 66849999
             }
           },
           {
@@ -1966,11 +2044,11 @@
             "line": 18,
             "name": "I fill in the recipient Delivery address form",
             "match": {
-              "location": "features\\step_definitions\\orderPhysCard.js:68"
+              "location": "features\\step_definitions\\orderPhysCard.js:71"
             },
             "result": {
               "status": "passed",
-              "duration": 29209300
+              "duration": 26683300
             }
           },
           {
@@ -1979,11 +2057,11 @@
             "line": 19,
             "name": "I select the first delivery method",
             "match": {
-              "location": "features\\step_definitions\\orderPhysCard.js:89"
+              "location": "features\\step_definitions\\orderPhysCard.js:102"
             },
             "result": {
               "status": "passed",
-              "duration": 52795899
+              "duration": 36189299
             }
           },
           {
@@ -1992,11 +2070,11 @@
             "line": 20,
             "name": "I click \"Next\" to go to the static password",
             "match": {
-              "location": "features\\step_definitions\\orderPhysCard.js:98"
+              "location": "features\\step_definitions\\orderPhysCard.js:109"
             },
             "result": {
               "status": "passed",
-              "duration": 33998399
+              "duration": 37106700
             }
           },
           {
@@ -2005,11 +2083,11 @@
             "line": 21,
             "name": "I fill a static password",
             "match": {
-              "location": "features\\step_definitions\\orderPhysCard.js:103"
+              "location": "features\\step_definitions\\orderPhysCard.js:114"
             },
             "result": {
               "status": "passed",
-              "duration": 5851999
+              "duration": 6101099
             }
           },
           {
@@ -2018,37 +2096,11 @@
             "line": 22,
             "name": "I click \"Next\" to go to the final modal",
             "match": {
-              "location": "features\\step_definitions\\orderPhysCard.js:111"
+              "location": "features\\step_definitions\\orderPhysCard.js:128"
             },
             "result": {
               "status": "passed",
-              "duration": 41250700
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 23,
-            "name": "I open the payment wallet dropdown",
-            "match": {
-              "location": "features\\step_definitions\\orderPhysCard.js:116"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 386489300
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 24,
-            "name": "I click on \"7164_IFX_EUR\" wallet for to pay for delivery",
-            "match": {
-              "location": "features\\step_definitions\\orderPhysCard.js:124"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 35088400
+              "duration": 39112600
             }
           },
           {
@@ -2057,24 +2109,24 @@
             "line": 25,
             "name": "I click \"Pay\" to complete the order",
             "match": {
-              "location": "features\\step_definitions\\orderPhysCard.js:131"
+              "location": "features\\step_definitions\\orderPhysCard.js:167"
             },
             "result": {
               "status": "passed",
-              "duration": 110572499
+              "duration": 581738700
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 26,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 820213700
+              "duration": 844739000
             }
           },
           {
@@ -2087,7 +2139,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 879737899
+              "duration": 893357099
             }
           },
           {
@@ -2095,7 +2147,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 130053499
+              "duration": 12656900
             }
           }
         ],
@@ -2125,7 +2177,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 204439500
+              "duration": 28500
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 47965799
             }
           },
           {
@@ -2134,11 +2194,11 @@
             "line": 7,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1538923100
+              "duration": 1758988800
             }
           },
           {
@@ -2147,24 +2207,24 @@
             "line": 8,
             "name": "I login with valid credentials",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:8"
+              "location": "features\\step_definitions\\login.steps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 266603000
+              "duration": 45401700
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1350571800
+              "duration": 1353529399
             }
           },
           {
@@ -2177,7 +2237,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1885836800
+              "duration": 2864533900
             }
           },
           {
@@ -2190,7 +2250,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 128211599
+              "duration": 212004700
             }
           },
           {
@@ -2203,7 +2263,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3596799
+              "duration": 5935599
             }
           },
           {
@@ -2216,98 +2276,124 @@
             },
             "result": {
               "status": "passed",
-              "duration": 315954899
+              "duration": 199074800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I open the wallet drop down list to select a wallet",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47819300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I select wallet \"GURUPAY_EUR\" from context",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31494200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I enter reference \"Payment to beneficiary (auto test)\"",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5108300
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 19,
-            "name": "I enter reference \"Payment to beneficiary (auto test)\"",
+            "name": "I should the \"Sign the payment\" flag should be enabled by default",
             "match": {
-              "location": "features\\step_definitions\\payment.steps.js:59"
+              "location": "features\\step_definitions\\payment.steps.js:69"
             },
             "result": {
               "status": "passed",
-              "duration": 5815300
+              "duration": 6056500
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 20,
-            "name": "I should the \"Sign the payment\" flag should be enabled by default",
+            "name": "I click Create and sign",
             "match": {
-              "location": "features\\step_definitions\\payment.steps.js:65"
+              "location": "features\\step_definitions\\payment.steps.js:76"
             },
             "result": {
               "status": "passed",
-              "duration": 4355999
+              "duration": 35410000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 21,
-            "name": "I click Create and sign",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\payment.steps.js:72"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 37862200
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 22,
-            "name": "I enter the MFA code \"111111\"",
-            "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 870364100
+              "duration": 846709100
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 23,
+            "line": 22,
             "name": "I should see a success message \"Payment was created successfully\"",
             "match": {
               "location": "features\\step_definitions\\common.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 877173699
+              "duration": 1868926099
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 24,
+            "line": 23,
             "name": "I should be on the home page",
             "match": {
-              "location": "features\\step_definitions\\payment.steps.js:77"
+              "location": "features\\step_definitions\\payment.steps.js:81"
             },
             "result": {
               "status": "passed",
-              "duration": 2510500
+              "duration": 2603300
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 25,
+            "line": 24,
             "name": "I should see the latest payment at current time",
             "match": {
-              "location": "features\\step_definitions\\payment.steps.js:83"
+              "location": "features\\step_definitions\\payment.steps.js:87"
             },
             "result": {
               "status": "passed",
-              "duration": 1306899
+              "duration": 1333599
             }
           },
           {
@@ -2315,7 +2401,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 101560700
+              "duration": 11936400
             }
           }
         ],
@@ -2337,7 +2423,7 @@
         "description": "",
         "id": "create-report;create-a-new-user-with-full-access",
         "keyword": "Scenario",
-        "line": 12,
+        "line": 11,
         "name": "Create a new user with full access",
         "steps": [
           {
@@ -2345,7 +2431,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 207532699
+              "duration": 24099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 47602100
             }
           },
           {
@@ -2354,11 +2448,11 @@
             "line": 7,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1544560100
+              "duration": 1782696299
             }
           },
           {
@@ -2367,102 +2461,102 @@
             "line": 8,
             "name": "I login with valid credentials",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:8"
+              "location": "features\\step_definitions\\login.steps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 248351999
+              "duration": 38536800
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1332972099
+              "duration": 1857911300
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 13,
+            "line": 12,
             "name": "I navigate to the Reports page",
             "match": {
               "location": "features\\step_definitions\\report.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1427465200
+              "duration": 2383491299
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 14,
+            "line": 13,
             "name": "I click the \"Create report\" to get a report",
             "match": {
               "location": "features\\step_definitions\\report.steps.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 633573600
+              "duration": 626686000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 15,
+            "line": 14,
             "name": "I fill the report name with \"Atest report\"",
             "match": {
               "location": "features\\step_definitions\\report.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 5192999
+              "duration": 5429900
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 16,
+            "line": 15,
             "name": "I submit the create a report",
             "match": {
               "location": "features\\step_definitions\\report.steps.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 34960800
+              "duration": 39256999
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 17,
+            "line": 16,
             "name": "I should see a success message \"The report is ready! You can find it and download in Reports tab.\"",
             "match": {
               "location": "features\\step_definitions\\common.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1880985699
+              "duration": 3920716099
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 18,
+            "line": 17,
             "name": "I should see a new report at current time",
             "match": {
               "location": "features\\step_definitions\\report.steps.js:53"
             },
             "result": {
               "status": "passed",
-              "duration": 3011529900
+              "duration": 3008736099
             }
           },
           {
@@ -2470,7 +2564,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 104506500
+              "duration": 12931199
             }
           }
         ],
@@ -2500,7 +2594,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 204560299
+              "duration": 29299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 46913899
             }
           },
           {
@@ -2509,11 +2611,11 @@
             "line": 7,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1534812500
+              "duration": 1842660600
             }
           },
           {
@@ -2522,24 +2624,24 @@
             "line": 8,
             "name": "I login with sub-user credentials",
             "match": {
-              "location": "features\\step_definitions\\subUserLogin.steps.js:6"
+              "location": "features\\step_definitions\\subUserLogin.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 289964400
+              "duration": 51572099
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1333083700
+              "duration": 1369321900
             }
           },
           {
@@ -2548,11 +2650,11 @@
             "line": 10,
             "name": "I should see the dashboard",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:17"
+              "location": "features\\step_definitions\\login.steps.js:25"
             },
             "result": {
               "status": "passed",
-              "duration": 1352876799
+              "duration": 2854234100
             }
           },
           {
@@ -2560,7 +2662,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 112904299
+              "duration": 13692199
             }
           }
         ],
@@ -2582,184 +2684,192 @@
         "description": "",
         "id": "top-up-from-card;create-a-new-top-up-from-card",
         "keyword": "Scenario",
-        "line": 11,
+        "line": 12,
         "name": "Create a new top up from card",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
-              "status": "passed",
-              "duration": 207407600
+              "status": "skipped",
+              "duration": 151600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 7,
+            "line": 8,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
-              "status": "passed",
-              "duration": 1279438900
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 8,
+            "line": 9,
             "name": "I login with valid credentials",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:8"
+              "location": "features\\step_definitions\\login.steps.js:13"
             },
             "result": {
-              "status": "passed",
-              "duration": 148071899
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 9,
-            "name": "I enter the MFA code \"111111\"",
+            "line": 10,
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
-              "status": "passed",
-              "duration": 1321842900
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 12,
+            "line": 13,
             "name": "I click the \"Top up\" on the page",
             "match": {
               "location": "features\\step_definitions\\topUpFromCard.steps.js:6"
             },
             "result": {
-              "status": "passed",
-              "duration": 1847400599
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 13,
-            "name": "I click \"Choose from list\" on the modal",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 120934399
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 14,
-            "name": "I select \"7163_GuruPay_EUR\" in the dropdown",
+            "name": "I click \"Choose from list\" on the modal",
             "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:16"
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:11"
             },
             "result": {
-              "status": "passed",
-              "duration": 29597800
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 15,
-            "name": "I click the \"Next\" on the page",
+            "name": "I select \"GURUPAY_EUR\" from dropdown",
             "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:6"
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:16"
             },
             "result": {
-              "status": "passed",
-              "duration": 114470399
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 16,
-            "name": "I should see the \"How would you like to pay?\" on the modal window",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 113459199
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 17,
-            "name": "I select \"Top up from card\" method",
+            "line": 16,
+            "name": "I click the \"Next\" on the page",
             "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:26"
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:6"
             },
             "result": {
-              "status": "passed",
-              "duration": 37395999
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see the \"How would you like to pay?\" on the modal window",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:42"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 18,
-            "name": "I enter top up amount \"10\" in field",
+            "name": "I select \"Top up from card\" method",
             "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:31"
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:47"
             },
             "result": {
-              "status": "passed",
-              "duration": 97105400
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 19,
-            "name": "I click \"Confirm\" on the modal window",
+            "name": "I enter top up amount \"10\" in field",
             "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:38"
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:52"
             },
             "result": {
-              "status": "passed",
-              "duration": 2297832699
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 20,
-            "name": "I pay with test card",
+            "name": "I click \"Confirm\" on the modal window",
             "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:52"
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:59"
             },
             "result": {
-              "status": "passed",
-              "duration": 75418300
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 21,
-            "name": "I should see success payment screen",
+            "name": "I pay with test card",
             "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:93"
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:73"
             },
             "result": {
-              "status": "passed",
-              "duration": 1332857799
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I should see success payment screen",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromCard.steps.js:114"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -2767,19 +2877,29 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 132044699
+              "duration": 99199
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@only-individual",
+            "line": 1
+          }
+        ],
         "type": "scenario"
       }
     ],
     "id": "top-up-from-card",
-    "line": 1,
+    "line": 2,
     "keyword": "Feature",
     "name": "Top up from card",
-    "tags": [],
+    "tags": [
+      {
+        "name": "@only-individual",
+        "line": 1
+      }
+    ],
     "uri": "features\\topUpFromCard.feature"
   },
   {
@@ -2797,7 +2917,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 216167099
+              "duration": 19399
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43484100
             }
           },
           {
@@ -2806,11 +2934,11 @@
             "line": 7,
             "name": "I navigate to the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:4"
+              "location": "features\\step_definitions\\login.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1520677700
+              "duration": 1823001500
             }
           },
           {
@@ -2819,193 +2947,154 @@
             "line": 8,
             "name": "I login with valid credentials",
             "match": {
-              "location": "features\\step_definitions\\login.steps.js:8"
+              "location": "features\\step_definitions\\login.steps.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 265186999
+              "duration": 44752800
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 9,
-            "name": "I enter the MFA code \"111111\"",
+            "name": "I enter the MFA code",
             "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:4"
+              "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1366394199
+              "duration": 1353472000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 12,
-            "name": "I click the \"Top up\" button",
+            "name": "I click the \"Wallets\" menu item",
             "match": {
-              "location": "features\\step_definitions\\topUpFromWallet.js:6"
+              "location": "features\\step_definitions\\topUpFromWallet.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 1870073899
+              "duration": 2931389100
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
-            "name": "I click the \"Choose from list\" dropdown",
+            "name": "I open wallet \"GURUPAY_EUR\" from context",
             "match": {
-              "location": "features\\step_definitions\\topUpFromWallet.js:11"
+              "location": "features\\step_definitions\\topUpFromWallet.js:18"
             },
             "result": {
               "status": "passed",
-              "duration": 120781799
+              "duration": 200027500
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 14,
-            "name": "I select payment wallet \"7163_GuruPay_EUR\"",
+            "name": "I click the \"Top up\" button",
             "match": {
-              "location": "features\\step_definitions\\topUpFromWallet.js:16"
+              "location": "features\\step_definitions\\topUpFromWallet.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 29605700
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 15,
-            "name": "I click the \"Next\" button",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromWallet.js:6"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 120949200
+              "duration": 379661599
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 16,
+            "line": 15,
             "name": "I should see the \"How would you like to pay?\" modal",
             "match": {
-              "location": "features\\step_definitions\\topUpFromWallet.js:21"
+              "location": "features\\step_definitions\\topUpFromWallet.js:31"
             },
             "result": {
               "status": "passed",
-              "duration": 105899499
+              "duration": 105683699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I select \"Top up from wallet\" payment method",
+            "match": {
+              "location": "features\\step_definitions\\topUpFromWallet.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26972199
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 17,
-            "name": "I select \"Top up from wallet\" payment method",
+            "name": "I enter top up amount \"10\"",
             "match": {
-              "location": "features\\step_definitions\\topUpFromWallet.js:26"
+              "location": "features\\step_definitions\\topUpFromWallet.js:44"
             },
             "result": {
               "status": "passed",
-              "duration": 37548399
+              "duration": 96273999
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 18,
-            "name": "I enter top up amount \"10\"",
+            "name": "I click the Wallet dropdown",
             "match": {
-              "location": "features\\step_definitions\\topUpFromWallet.js:31"
+              "location": "features\\step_definitions\\topUpFromWallet.js:51"
             },
             "result": {
               "status": "passed",
-              "duration": 85024499
+              "duration": 39897200
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 19,
-            "name": "I click the Wallet dropdown",
+            "name": "I select destination wallet \"WALLESTER_EUR\" from context",
             "match": {
-              "location": "features\\step_definitions\\topUpFromWallet.js:42"
+              "location": "features\\step_definitions\\topUpFromWallet.js:58"
             },
             "result": {
               "status": "passed",
-              "duration": 13041399
+              "duration": 36250000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 20,
-            "name": "I select destination wallet \"7169_Wallester_EUR\"",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromWallet.js:51"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 38382400
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 21,
             "name": "I click the \"Confirm\" button",
             "match": {
-              "location": "features\\step_definitions\\topUpFromWallet.js:6"
+              "location": "features\\step_definitions\\topUpFromWallet.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 245795300
+              "duration": 244772499
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 22,
-            "name": "I should see a success message \"You have successfully topped up your wallet\"",
+            "line": 21,
+            "name": "I should be on the same wallet page from context \"GURUPAY_EUR\"",
             "match": {
-              "location": "features\\step_definitions\\common.steps.js:5"
+              "location": "features\\step_definitions\\topUpFromWallet.js:71"
             },
             "result": {
               "status": "passed",
-              "duration": 370421000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 23,
-            "name": "I should see transaction at current time",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromWallet.js:56"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3007272899
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 24,
-            "name": "I should be on wallet page \"7163\"",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromWallet.js:77"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1534099
+              "duration": 1890833699
             }
           },
           {
@@ -3013,7 +3102,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 101059699
+              "duration": 13419200
             }
           }
         ],

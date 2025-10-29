@@ -1,71 +1,111 @@
-const fs = require('fs');
-const path = require('path');
-const reporter = require('cucumber-html-reporter');
+const fs = require("fs");
+const path = require("path");
+const reporter = require("cucumber-html-reporter");
 
-const reportsDir = path.join(__dirname, 'reports');
-const logsDir = path.join(__dirname, 'logs');
+const reportsDir = path.join(__dirname, "reports");
+const logsDir = path.join(__dirname, "logs");
 
-// создаём папку logs, если нет
-if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir);
+if (!fs.existsSync(logsDir)) fs.mkdirSync(logsDir, { recursive: true });
+
+// === Ищем последний JSON отчёт ===
+const jsonFiles = fs
+  .readdirSync(reportsDir)
+  .filter(f => f.endsWith(".json"))
+  .map(f => path.join(reportsDir, f))
+  .sort((a, b) => fs.statSync(b).mtime - fs.statSync(a).mtime);
+
+if (jsonFiles.length === 0) {
+  console.error("❌ No JSON reports found in reports directory.");
+  process.exit(1);
 }
 
-// ищем последний JSON
-const latestJson = path.join(reportsDir, 'report.json');
+const latestJson = jsonFiles[0];
+console.log(`📄 Using JSON: ${latestJson}`);
+
+// === Определяем имя окружения / отчёта ===
+const envName = path.basename(latestJson, ".json");
+
+// === Генерация HTML отчёта ===
 const options = {
-  theme: 'bootstrap',
+  theme: "bootstrap",
   jsonFile: latestJson,
-  output: path.join(reportsDir, 'report.html'),
+  output: path.join(reportsDir, `${envName}.html`),
   reportSuiteAsScenarios: true,
-  launchReport: true,
+  launchReport: true, // откроет в браузере
   metadata: {
     "App Version": "1.0.0",
     "Test Environment": "STAGE",
     "Browser": "Chromium",
     "Platform": process.platform
-  }
+  },
 };
 
-// генерим HTML отчёт
-reporter.generate(options);
+try {
+  reporter.generate(options);
+  console.log(`✅ HTML report generated: ${options.output}`);
+} catch (err) {
+  console.error(`❌ Failed to generate HTML report: ${err.message}`);
+}
 
-// читаем json для статистики
+// --- Анализ JSON и корректный подсчёт статусов по СЦЕНАРИЯМ ---
 const reportData = JSON.parse(fs.readFileSync(latestJson, 'utf-8'));
-const features = reportData.length;
-let scenarios = 0;
-let passed = 0;
-let failed = 0;
 
-reportData.forEach(f => {
-  f.elements.forEach(s => {
-    scenarios++;
-    const isFailed = s.steps.some(step => step.result.status === 'failed');
-    if (isFailed) failed++;
-    else passed++;
-  });
-});
-
-// берём длительность из JSON (берём максимум среди фич)
+let features = reportData.length;
+let scenarios = 0, passed = 0, failed = 0, skipped = 0;
 let durationMs = 0;
+
+function scenarioStatus(scn) {
+  // берём статусы шагов + хуков
+  const stepStatuses =
+    (scn.steps || []).map(s => s.result?.status).filter(Boolean);
+  const hookStatuses = [
+    ...((scn.before || []).map(h => h.result?.status) || []),
+    ...((scn.after  || []).map(h => h.result?.status) || []),
+  ].filter(Boolean);
+
+  const statuses = [...stepStatuses, ...hookStatuses];
+
+  // если вообще нет статусов — считаем как skipped (сценарий отфильтрован)
+  if (statuses.length === 0) return 'skipped';
+
+  if (statuses.includes('failed')) return 'failed';
+  if (statuses.every(s => s === 'passed')) return 'passed';
+  if (statuses.every(s => s === 'skipped')) return 'skipped';
+
+  // pending/undefined/ambiguous и т.п. — в skipped
+  return 'skipped';
+}
+
 reportData.forEach(f => {
-  f.elements.forEach(s => {
-    let scDuration = s.steps.reduce((acc, step) => acc + (step.result.duration || 0), 0);
-    durationMs += scDuration;
-  });
+  (f.elements || [])
+    .filter(scn => scn.keyword === 'Scenario' || scn.type === 'scenario') // <== вот эта строка ключевая!
+    .forEach(scn => {
+      scenarios++;
+      const st = scenarioStatus(scn);
+      if (st === 'failed') failed++;
+      else if (st === 'passed') passed++;
+      else skipped++;
+
+      durationMs += (scn.steps || [])
+        .reduce((acc, step) => acc + (step.result?.duration || 0), 0);
+    });
 });
-const durationSec = (durationMs / 1e9).toFixed(2); // в секундах
 
-// пишем лог
-const timestamp = new Date().toLocaleString('sv-SE', { 
-  timeZone: 'Europe/Warsaw' 
-}).replace('T', ' ');
-const logFile = path.join(logsDir, 'test-runs.log');
-const logEntry = `[${timestamp}] Features: ${features}, Scenarios: ${scenarios}, Passed: ${passed}, Failed: ${failed}, Duration: ${durationSec}s\n`;
+const durationSec = (durationMs / 1e9).toFixed(2);
+const timestamp = new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Warsaw' }).replace('T', ' ');
 
-fs.appendFileSync(logFile, logEntry, 'utf-8');
+// === Запись логов в компактном формате ===
+const safeEnvName = envName.replace(/[:]/g, '.').replace('test.report.', 'test-');
+const logFile = path.join(logsDir, `test-runs-${safeEnvName}.log`);
+const now = new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Warsaw' }).replace('T', ' ');
 
-console.log(`Log saved to ${logFile}`);
+const logLine = `[${now}] Features: ${features}, Scenarios: ${scenarios}, Passed: ${passed}, Failed: ${failed}, Skipped: ${skipped}, Duration: ${durationSec}s\n`;
 
-
-
+try {
+  fs.appendFileSync(logFile, logLine, "utf-8");
+  console.log(`📝 Log updated: ${logFile}`);
+  console.log(logLine.trim());
+} catch (err) {
+  console.error(`❌ Failed to write log: ${err.message}`);
+}
 

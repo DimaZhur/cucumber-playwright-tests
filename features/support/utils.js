@@ -1,3 +1,4 @@
+// генерирует IBAN
 const iban = require('iban');
 
 function generateAustrianIban() {

@@ -8,7 +8,7 @@ When('I click on Send to create a new payment', async function () {
 
 // Выбор беника
 When('I select the automation beneficiary', async function () {
-  const iban = 'NL67RABO8973442368';
+  const iban = process.env.BENEFICIARY_IBAN;
   const beneficiary = this.page.locator(`div.target-data-subtitle:text("${iban}")`);
   await expect(beneficiary).toBeVisible({ timeout: 10000 });
   await beneficiary.click();
@@ -27,39 +27,43 @@ When('I enter payment amount {string}', async function (amount) {
   console.log(`Entered amount: ${amount}`);
 });
 
+//Открываем дропдаун по клику на "EUR"
+When('I open the wallet drop down list to select a wallet', async function () {
+  await this.page.waitForSelector('div.currency-input >> text=EUR', { timeout: 10000 });
+  await this.page.click('div.currency-input >> text=EUR');
+  console.log('Wallet dropdown opened by clicking EUR');
+});
 
-// Purpose code
-// When('I select the first purpose code', async function () {
-//   // Открываем дропдаун Purpose code
-//   await this.page.locator('label:has-text("Purpose code") .dropdown').click();
+// Выбираем валлет
+When('I select wallet {string} from context', async function (walletKey) {
+  const walletValue = process.env[`WALLET_${walletKey.toUpperCase()}`];
+  if (!walletValue) {
+    throw new Error(`Wallet variable WALLET_${walletKey.toUpperCase()} not found in .env`);
+  }
 
-//   // Находим первый элемент в списке
-//   const firstOption = this.page.locator('.dropdown-list-item').first();
+  console.log(`Selecting wallet from context: ${walletKey} → ${walletValue}`);
 
-//   // Ждём пока он появится
-//   await expect(firstOption).toBeVisible({ timeout: 5000 });
+  // Дожидаемся, пока дропдаун откроется и появятся элементы
+  await this.page.waitForSelector('.dropdown-list-item', { timeout: 10000 });
 
-//   // Кликаем
-//   await firstOption.click();
-// });
+  // Ищем элемент по тексту
+  const wallet = this.page.locator('.dropdown-list-item').filter({
+    hasText: walletValue.trim(),
+  });
 
-// Открываем дропдаун по клику на "EUR"
-// When('I open the wallet drop down list to select a wallet', async function () {
-//   await this.page.waitForSelector('div.currency-input >> text=EUR', { timeout: 10000 });
-//   await this.page.click('div.currency-input >> text=EUR');
-//   console.log('Wallet dropdown opened by clicking EUR');
-// });
+  await expect(wallet).toBeVisible({ timeout: 10000 });
 
-// // Выбираем валлет
-// When('I select wallet "AT 3326 GuruPay C2S"', async function () {
-//   await this.page.click('text=AT 3326 GuruPay C2S');
-// });
+  // Скроллим и кликаем
+  await wallet.scrollIntoViewIfNeeded();
+  await wallet.click({ force: true });
+
+  console.log(`Wallet selected successfully: ${walletValue}`);
+});
 
 // Вводим reference
 When('I enter reference {string}', async function (referenceText) {
   await this.page.fill('textarea[placeholder="Reference"]', referenceText);
 });
-
 
 // Проверяем, что чекбокс "When creating, sign the payment" включен по умолчанию
 Then('I should the "Sign the payment" flag should be enabled by default', async function () {

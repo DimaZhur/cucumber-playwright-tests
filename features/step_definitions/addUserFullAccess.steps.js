@@ -33,14 +33,16 @@ When('I fill a user info in the form with name {string}', async function (userNa
   console.log(`Filled Name: ${this.latestUserName}`);
 
   // Генерируем email
-  const randomEmail = `user_${Date.now()}@test.com`;
+  const domain = process.env.DEFAULT_EMAIL_DOMAIN || 'test.com';
+  const randomEmail = `user_${Date.now()}@${domain}`;
   this.latestUserEmail = randomEmail;
   await modal.getByPlaceholder('Email').fill(randomEmail);
   console.log(`Filled Email: ${randomEmail}`);
 
   // Телефон
-  await modal.getByPlaceholder('Phone number').fill('48556666777');
-  console.log('Filled Phone');
+ const phone = process.env.DEFAULT_PHONE || '48556666777';
+ await modal.getByPlaceholder('Phone number').fill(phone);
+ console.log(`Filled Phone: ${phone}`);
 
   // Открыть дропдаун Access options
   await modal.locator('text=Access options').click();

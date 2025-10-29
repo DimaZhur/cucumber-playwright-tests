@@ -34,94 +34,92 @@ When('I open the wallets dropdown in exchange', async function () {
   console.log('Wallet dropdown opened (top EUR block)');
 });
 
-// Выбираем исходный кошелёк по названию ("7164_IFX_EUR")
-When('I select wallet {string} in exchange', async function (walletName) {
-  const walletSelector = `//div[contains(@class,"wallet-balanced-helper-label") and normalize-space(text())="${walletName}"]`;
-  await this.page.waitForSelector(walletSelector, { timeout: 10000 });
-  await this.page.click(walletSelector);
-  console.log(`Wallet "${walletName}" selected in exchange`);
+// Выбираем исходный кошелек по имени из .env
+When('I select wallet {string} from context in exchange', async function (walletKey) {
+  const walletValue = process.env[`WALLET_${walletKey.toUpperCase()}`];
+  if (!walletValue) {
+    throw new Error(`Wallet variable WALLET_${walletKey.toUpperCase()} not found in environment`);
+  }
+
+  // Убедимся, что список открыт — ждём появления элементов
+  await this.page.waitForSelector('div.dropdown-list-item.ellipses', { state: 'visible', timeout: 10000 });
+
+  // Ищем нужный кошелёк по тексту
+  const wallet = this.page.locator(`div.dropdown-list-item.ellipses:has-text("${walletValue}")`);
+  await expect(wallet).toBeVisible({ timeout: 10000 });
+
+  // Кликаем
+  await wallet.click();
+
+  console.log(`Selected wallet from context: ${walletValue}`);
 });
 
-// Открываем нижний дропдаун конечных кошельков (Wallet)
-When('I open the destination wallets dropdown in exchange', async function () {
-  const destinationDropdown = this.page.locator('div.currency-input').nth(1).locator('div.currency-helper.text-overflow');
-  await destinationDropdown.waitFor({ state: 'visible', timeout: 10000 });
-  await destinationDropdown.click();
-  console.log('Destination wallets dropdown opened (bottom Wallet block)');
+  // Открываем нижний дропдаун конечных кошельков (Wallet)
+  When('I open the destination wallets dropdown in exchange', async function () {
+    const destinationDropdown = this.page.locator('div.currency-input').nth(1).locator('div.currency-helper.text-overflow');
+    await destinationDropdown.waitFor({ state: 'visible', timeout: 10000 });
+    await destinationDropdown.click();
+    console.log('Destination wallets dropdown opened (bottom Wallet block)');
+  });
+
+  // Выбираем конечный кошелек по имени из .env
+When('I select destination wallet {string} from context in exchange', async function (walletKey) {
+  const walletValue = process.env[`WALLET_${walletKey.toUpperCase()}`];
+  if (!walletValue) {
+    throw new Error(`Wallet variable WALLET_${walletKey.toUpperCase()} not found in environment`);
+  }
+
+  // Ждём появления списка кошельков
+  await this.page.waitForSelector('div.dropdown-list-item.ellipses', { state: 'visible', timeout: 10000 });
+
+  // Ищем элемент по тексту
+  const wallet = this.page.locator(`div.dropdown-list-item.ellipses:has-text("${walletValue}")`);
+  await expect(wallet).toBeVisible({ timeout: 10000 });
+
+  // Кликаем по найденному элементу
+  await wallet.click();
+
+  console.log(`Selected destination wallet from context: ${walletValue}`);
 });
 
-// Выбираем конечный кошелёк по названию (нижний Wallet)
-When('I select destination wallet {string} in exchange', async function (walletName) {
-  const walletSelector = `//div[contains(@class,"wallet-balanced-helper-label") and normalize-space(text())="${walletName}"]`;
-  await this.page.waitForSelector(walletSelector, { timeout: 10000 });
-  await this.page.click(walletSelector);
-  console.log(`Destination wallet "${walletName}" selected in exchange`);
-});
+    // Нажимаем на кнопку Submit в Exchange
+    When('I submit the exchange form', async function () {
+      const submitButton = this.page.locator('button:has-text("Submit")');
+      await submitButton.waitFor({ state: 'visible', timeout: 5000 });
+      await submitButton.click();
+      console.log('Clicked Submit button in exchange');
 
-// Нажимаем на кнопку Submit в Exchange
-When('I submit the exchange form', async function () {
-  const submitButton = this.page.locator('button:has-text("Submit")');
-  await submitButton.waitFor({ state: 'visible', timeout: 5000 });
-  await submitButton.click();
-  console.log('Clicked Submit button in exchange');
+      // Таймаут, чтобы успело появиться окно MFA
+      await this.page.waitForTimeout(500);
+    });
 
-  // Таймаут, чтобы успело появиться окно MFA
-  await this.page.waitForTimeout(500);
-});
+    // Проверка, что мы находимся на home
+    Then('I should be on the home page after exchange', async function () {
+      await expect(this.page).toHaveURL(/.*\/home/);
+      await expect(this.page.locator('text=Home')).toBeVisible();
+      console.log('User is on Home page after exchange');
+    });
 
-// Проверка, что мы находимся на home
-Then('I should be on the home page after exchange', async function () {
-  await expect(this.page).toHaveURL(/.*\/home/);
-  await expect(this.page.locator('text=Home')).toBeVisible();
-  console.log('User is on Home page after exchange');
-});
+    // Проверка, что сверху появилась новая exchange-транзакция с суммой и текущим временем
+    Then('I should see the latest exchange transaction {string} at current time', async function (expectedText) {
+      // Берём текущее время в формате HH:mm
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const currentTime = `${hours}:${minutes}`;
 
-// Проверка, что сверху появилась новая exchange-транзакция с суммой и текущим временем
-Then('I should see the latest exchange transaction {string} at current time', async function (expectedText) {
-  // Берём текущее время в формате HH:mm
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const currentTime = `${hours}:${minutes}`;
+      console.log(`Ждём 3 секунды перед проверкой транзакции...`);
+      await this.page.waitForTimeout(3000); // пауза 3 секунды
 
-  console.log(`Ждём 3 секунды перед проверкой транзакции...`);
-  await this.page.waitForTimeout(3000); // пауза 3 секунды
+      console.log(`Ищем exchange-транзакцию "${expectedText}" с временем ${currentTime}`);
 
-  console.log(`Ищем exchange-транзакцию "${expectedText}" с временем ${currentTime}`);
+      // Ищем первую строку в истории (самую свежую транзакцию)
+      const firstExchange = this.page.locator('.group-item').first();
 
-  // Ищем первую строку в истории (самую свежую транзакцию)
-  const firstExchange = this.page.locator('.group-item').first();
+      // Проверяем, что текст совпадает
+      await expect(firstExchange).toContainText(expectedText);
+      await expect(firstExchange).toContainText(currentTime);
 
-  // Проверяем, что текст совпадает
-  await expect(firstExchange).toContainText(expectedText);
-  await expect(firstExchange).toContainText(currentTime);
-
-  console.log(`Exchange "${expectedText}" at ${currentTime} is visible`);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      console.log(`Exchange "${expectedText}" at ${currentTime} is visible`);
+    });
 

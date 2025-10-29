@@ -6,9 +6,8 @@ Feature: Create report
 Background:
   Given I navigate to the login page
   When I login with valid credentials
-  And I enter the MFA code "111111"
+  And I enter the MFA code
 
-    
 Scenario: Create a new user with full access  
     When I navigate to the Reports page
     When I click the "Create report" to get a report

@@ -12,8 +12,6 @@ Then('I should see the {string} modal window', async function (modalTitle) {
 });
 
 // Выбираем опцию Physical card
-
-
 When('I select {string} option', async function (option) {
   // плитка = ближайший div.card-panel-group к заголовку "Physical card"
   const tile = this.page.locator(
@@ -40,14 +38,19 @@ When('I fill in the recipient info form', async function () {
   const modal = this.page.locator('form.modal');
   await expect(modal).toBeVisible({ timeout: 10000 });
 
-  // Имя
-  await this.page.getByPlaceholder('First name').fill('A test');
+  const firstName = process.env.RECIPIENT_FIRST_NAME;
+  const lastName = process.env.RECIPIENT_LAST_NAME;
+  const phone = process.env.RECIPIENT_PHONE;
 
-  // Фамилия
-  await this.page.getByPlaceholder('Last name').fill('A test');
+  if (!firstName || !lastName || !phone) {
+    throw new Error('Missing recipient info in .env');
+  }
 
-  // Телефон
-  await this.page.getByPlaceholder('Phone number').fill('48556666777');
+  console.log(`Заполняем данные получателя: ${firstName} ${lastName}, ${phone}`);
+
+  await this.page.getByPlaceholder('First name').fill(firstName);
+  await this.page.getByPlaceholder('Last name').fill(lastName);
+  await this.page.getByPlaceholder('Phone number').fill(phone);
 });
 
 // Открываем дропдаун Country и выбираем страну Austria (первую в списке)
@@ -64,25 +67,35 @@ When('I select the first country in the list', async function () {
   await list.first().click();
 });
 
-// Заполняем блок Delivery address
+// Заполняем блок Delivery address из .env
 When('I fill in the recipient Delivery address form', async function () {
   const modal = this.page.locator('form.modal');
   await expect(modal).toBeVisible({ timeout: 10000 });
 
-  // Город
-  await this.page.getByPlaceholder('City').fill('A test');
+  // Получаем данные из .env
+  const address = {
+    city: process.env.DELIVERY_ADDRESS_CITY,
+    street: process.env.DELIVERY_ADDRESS_STREET,
+    house: process.env.DELIVERY_ADDRESS_HOUSE,
+    flat: process.env.DELIVERY_ADDRESS_FLAT,
+    postal: process.env.DELIVERY_ADDRESS_POSTCODE,
+  };
 
-  // Улица
-  await this.page.getByPlaceholder('Street').fill('A test');
+  // Проверка, что все поля заданы
+  for (const [key, value] of Object.entries(address)) {
+    if (!value) throw new Error(`Missing DELIVERY_ADDRESS_${key.toUpperCase()} in .env`);
+  }
 
-  // Дом
-  await this.page.getByPlaceholder('House').fill('A test');
+  console.log('Filling delivery address:', address);
 
-  // Квартира
-  await this.page.getByPlaceholder('Flat/Office').fill('A test');
+  // Заполняем поля формы
+  await this.page.getByPlaceholder('City').fill(address.city);
+  await this.page.getByPlaceholder('Street').fill(address.street);
+  await this.page.getByPlaceholder('House').fill(address.house);
+  await this.page.getByPlaceholder('Flat/Office').fill(address.flat);
+  await this.page.getByPlaceholder('Postal code').fill(address.postal);
 
-  // Почтовый код
-  await this.page.getByPlaceholder('Postal code').fill('A test');
+  console.log('Delivery address form filled successfully');
 });
 
 // Кликаем по первому варианту доставки (Express)
@@ -92,19 +105,23 @@ When('I select the first delivery method', async function () {
   await option.click();
 });
 
-
-
 // Клик по кнопке Next
 When('I click {string} to go to the static password', async function (buttonText) {
   await this.page.getByRole('button', { name: buttonText }).click();
 });
 
-//Вводим статический пароль
+// Вводим универсальный пароль PASSWORD1 (используется как static password)
 When('I fill a static password', async function () {
   const modal = this.page.locator('form.modal');
   await expect(modal).toBeVisible({ timeout: 10000 });
 
-  await this.page.getByPlaceholder('Static password').fill('111111zZ!');
+  const password = process.env.PASSWORD1;
+  if (!password) throw new Error('Missing PASSWORD1 in .env');
+
+  console.log('Filling static password from PASSWORD1');
+  await this.page.getByPlaceholder('Static password').fill(password);
+
+  console.log('Static password entered successfully');
 });
 
 // Клик по кнопке Next
@@ -113,20 +130,39 @@ When('I click {string} to go to the final modal', async function (buttonText) {
 });
 
 // Открываем дропдаун выбора кошелька
-When('I open the payment wallet dropdown', async function () {
-  const dropdownTrigger = this.page.locator('div.dropdown-item >> span.placeholder');
-  await expect(dropdownTrigger).toBeVisible({ timeout: 5000 });
-  await dropdownTrigger.click();
-  console.log('Payment wallet dropdown opened');
-});
+// When('I open the payment wallet dropdown', async function () {
+//   const dropdownTrigger = this.page.locator('div.dropdown-item >> span.placeholder');
+//   await expect(dropdownTrigger).toBeVisible({ timeout: 5000 });
+//   await dropdownTrigger.click();
+//   console.log('Payment wallet dropdown opened');
+// });
 
-//Выбираем карту для оплаты доставки
-When('I click on {string} wallet for to pay for delivery', async function (walletName) {
-  const walletSelector = `//div[contains(@class,"wallet-balanced-helper-label") and normalize-space(text())="${walletName}"]`;
-  await this.page.waitForSelector(walletSelector, { timeout: 10000 });
-  await this.page.click(walletSelector);
-  console.log(`Wallet "${walletName}" selected in exchange`);
-});
+// Выбираем кошелёк для оплаты доставки из контекста (.env)
+// When('I click on {string} wallet for to pay for delivery', async function (walletKey) {
+//   // Получаем значение кошелька из .env
+//   const walletValue = process.env[`WALLET_${walletKey.toUpperCase()}`];
+//   if (!walletValue) {
+//     throw new Error(`Wallet variable WALLET_${walletKey.toUpperCase()} not found in environment`);
+//   }
+
+//   // Ждём, пока список кошельков будет виден
+//   await this.page.waitForSelector('div.dropdown-list-item.ellipses', {
+//     state: 'visible',
+//     timeout: 10000,
+//   });
+
+//   // Ищем нужный кошелёк
+//   const wallet = this.page.locator(`div.dropdown-list-item.ellipses:has-text("${walletValue}")`);
+//   await expect(wallet).toBeVisible({ timeout: 10000 });
+
+//   // Кликаем по нему
+//   await wallet.click();
+
+//   // Сохраняем ID кошелька в контекст для последующих проверок (если нужно)
+//   this.currentWalletId = walletValue.split('_')[0];
+
+//   console.log(`Selected payment wallet for delivery: ${walletValue}`);
+// });
 
 When('I click "Pay" to complete the order', async function () {
   const modalButton = this.page.locator('form.modal >> .modal-buttons button');

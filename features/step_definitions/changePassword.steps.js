@@ -30,17 +30,22 @@ When('I click the {string} on the change password page', async function (buttonT
   await this.page.getByRole('button', { name: buttonText }).click();
 });
 
-
 // Меняем пароль на новый и обратно
 When('I change password from {string} to {string}', async function (oldPassword, newPassword) {
-  // Заполняем форму
-  await this.page.fill('input[placeholder="Current password"]', oldPassword);
-  await this.page.fill('input[placeholder="New password"]', newPassword);
-  await this.page.fill('input[placeholder="New password repeat"]', newPassword);
+  // Берем пароли из env, если они указаны в виде PLACEHOLDER'ов
+  const current = process.env[oldPassword] || oldPassword;
+  const next = process.env[newPassword] || newPassword;
 
-  // Жмём сохранить
+  // Заполняем поля
+  await this.page.fill('input[placeholder="Current password"]', current);
+  await this.page.fill('input[placeholder="New password"]', next);
+  await this.page.fill('input[placeholder="New password repeat"]', next);
+
+  // Сохраняем изменения
   await this.page.click('button:has-text("Save changes")');
+  console.log(`Changed password from ${current} to ${next}`);
 });
+
 
 //Выходим из системы
 When('I click the {string} button for logout', async function (buttonText) {
@@ -50,7 +55,14 @@ When('I click the {string} button for logout', async function (buttonText) {
 });
 
 //Логинимся заново
-When('I login again on {string} with email {string} and password {string}', async function (loginUrl, email, password) {
+// Логинимся заново
+When('I login again', async function () {
+  const loginUrl = process.env.BASE_URL + '/auth/login';
+  const email = process.env.EMAIL;
+  const password = process.env.PASSWORD2;
+
+  console.log(`Logging in again at: ${loginUrl} with ${email}`);
+
   // Открываем страницу логина
   await this.page.goto(loginUrl);
   await this.page.waitForSelector('input[placeholder="Email"]');
@@ -61,9 +73,9 @@ When('I login again on {string} with email {string} and password {string}', asyn
 
   // Нажимаем кнопку входа
   await this.page.click('button:has-text("Login")');
-
-  console.log(`Login form submitted on ${loginUrl} for user: ${email}`);
+  console.log(`Login form submitted for ${email}`);
 });
+
 
 
 

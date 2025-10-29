@@ -4,295 +4,76 @@
     {
       "type": "pwa-node",
       "request": "launch",
-      "name": "ALL Cucumber Tests",
+      "name": "Run ALL tests (choose environment)",
       "cwd": "${workspaceFolder}",
       "runtimeExecutable": "npx",
       "runtimeArgs": [
         "cucumber-js",
         "features/**/*.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js"
+        "--require", "features/step_definitions/**/*.js",
+        "--require", "features/support/**/*.js"
       ],
+      "env": {
+        "TEST_ENV": "${input:selectEnv}"
+      },
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     },
-
     {
       "type": "pwa-node",
       "request": "launch",
-      "name": "1 Admin login",
+      "name": "Run SINGLE feature (choose environment)",
       "cwd": "${workspaceFolder}",
       "runtimeExecutable": "npx",
       "runtimeArgs": [
         "cucumber-js",
-        "features/login.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
+        "features/${input:selectFeature}.feature",
+        "--require", "features/step_definitions/**/*.js",
+        "--require", "features/support/**/*.js"
       ],
+      "env": {
+        "TEST_ENV": "${input:selectEnv}"
+      },
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
-    },
+    }
+  ],
 
+  "inputs": [
     {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "2 Sub-user login",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "cucumber-js",
-        "features/subUserLogin.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
+      "id": "selectEnv",
+      "type": "pickString",
+      "description": "Select test environment",
+      "options": [
+        "test.individual",
+        "test.business",
+        "sandbox.individual",
+        "sandbox.business"
       ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
+      "default": "test.individual"
     },
-
     {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "3 Payment to beneficiary",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "cucumber-js",
-        "features/payment.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
+      "id": "selectFeature",
+      "type": "pickString",
+      "description": "Select feature to run",
+      "options": [
+        "login",
+        "subUserLogin",
+        "payment",
+        "exchange",
+        "topUpFromWallet",
+        "bulk",
+        "orderPhysCard",
+        "buyCrypto",
+        "addUserFullAccess",
+        "addIndBen",
+        "addCompBen",
+        "jwtTokens",
+        "topUpFromCard",
+        "changePassword",
+        "report"
       ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "4 Exchange",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "cucumber-js",
-        "features/exchange.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "5 Top up from wallet",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "cucumber-js",
-        "features/topUpFromWallet.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "6 Bulk payment",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "cucumber-js",
-        "features/bulk.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "7 Order a physical card",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "cucumber-js",
-        "features/orderPhysCard.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "8 Buy Crypto",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "cucumber-js",
-        "features/buyCrypto.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "9 Add user with full access",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "cucumber-js",
-        "features/addUserFullAccess.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "10 Add individual beneficiary",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "cucumber-js",
-        "features/addIndBen.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "11 Add company beneficiary",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "cucumber-js",
-        "features/addCompBen.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "12 JWT Tokens Generation",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "cucumber-js",
-        "features/jwtTokens.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-
-      {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "13 Top up from card",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "cucumber-js",
-        "features/topUpFromCard.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-
-      {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "14 Change password",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "cucumber-js",
-        "features/changePassword.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
-
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "15 Create report",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "cucumber-js",
-        "features/report.feature",
-        "--require",
-        "features/step_definitions/**/*.js",
-        "--require",
-        "features/support/**/*.js",
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
-    },
+      "default": "login"
+    }
   ]
 }
-
-
-
-
-
-

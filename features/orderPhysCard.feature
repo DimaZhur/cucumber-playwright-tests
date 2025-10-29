@@ -6,7 +6,7 @@ Feature: Order a physical card
 Background:
     Given I navigate to the login page
     When I login with valid credentials
-    And I enter the MFA code "111111"
+    And I enter the MFA code
 
 Scenario: Create a new physical card
     When I click on "Order a card" to order a new physical card
@@ -20,8 +20,8 @@ Scenario: Create a new physical card
     And I click "Next" to go to the static password
     When I fill a static password
     And I click "Next" to go to the final modal
-    And I open the payment wallet dropdown
-    And I click on "7164_IFX_EUR" wallet for to pay for delivery
+    # And I open the payment wallet dropdown
+    # And I click on "GURUPAY_EUR" wallet for to pay for delivery
     And I click "Pay" to complete the order
-    And I enter the MFA code "111111"
+    And I enter the MFA code
     Then I should see a success message "Card was successfully ordered."

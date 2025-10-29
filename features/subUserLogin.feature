@@ -6,5 +6,5 @@ Feature: Sub-user login
 Scenario: Successful login as sub-user
   Given I navigate to the login page
   When I login with sub-user credentials
-  And I enter the MFA code "111111"
+  And I enter the MFA code
   Then I should see the dashboard

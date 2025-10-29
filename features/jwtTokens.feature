@@ -6,7 +6,7 @@ Feature: JWT Tokens Generation
 Background:  
   Given I navigate to the login page  
   When I login with sub-user credentials
-  And I enter the MFA code "111111"  
+  And I enter the MFA code
 
 Scenario: Generate a new JWT token
  When I click on the profile avatar
@@ -16,7 +16,7 @@ Scenario: Generate a new JWT token
  And I enter "172.31.2.106" into the IP address field
  And I enter a session name with current date and time
  And I push "Confirm"
- And I enter the MFA code "111111"
+ And I enter the MFA code
  Then I save the generated tokens to a file
  And I click on "Ok, I got it"
  Then I should see the new session in the list

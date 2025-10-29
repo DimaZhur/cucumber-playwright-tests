@@ -26,10 +26,26 @@ When('I select {string} network in Buy Crypto form', async function (network) {
   await option.click();
 });
 
-// Ввод адреса кошелька
-When('I enter {string} as crypto wallet address', async function (address) {
-  // Находим textarea по placeholder и вводим значение
+// Генерация и ввод адреса криптокошелька
+When('I enter crypto wallet address in Buy Crypto form', async function () {
+  // Попробуем взять адрес из переменных окружения (удобно для CI)
+  const envAddress = process.env.CRYPTO_ADDRESS;
+
+  // Твой фиксированный адрес (резервный, если в env не задано)
+  const fallbackAddress = 'TKSXDA8HfE9E1y39RczVQ1ZascUEtaSToF';
+
+  // Выбираем окончательный адрес: env -> фиксированный
+  const address = envAddress && envAddress.trim().length > 0 ? envAddress.trim() : fallbackAddress;
+
+  // Сохраняем в контекст (this) чтобы другие шаги могли использовать
+  this.cryptoAddress = address;
+
+  console.log(`Generated/selected crypto wallet address: ${address}`);
+
+  // Вводим адрес в textarea (селектор у тебя был textarea[placeholder="Crypto wallet address"])
   await this.page.locator('textarea[placeholder="Crypto wallet address"]').fill(address);
+
+  console.log('Crypto wallet address entered successfully');
 });
 
 // Ввод суммы в поле Amount
@@ -47,16 +63,27 @@ When('I click the Wallet list', async function () {
   await this.page.waitForSelector('.dropdown-size-bg .dropdown-item', { state: 'visible', timeout: 5000 });
 });
 
-// Выбор конкретного кошелька по названию
-When('I select wallet {string} in Buy Crypto form', async function (walletName) {
+// Выбор кошелька из контекста (.env)
+When('I select wallet from context in Buy Crypto form', async function () {
+  // Берём имя кошелька из .env
+  const walletName = process.env.WALLET_GURUPAY_EUR;
+
+  if (!walletName) {
+    throw new Error('WALLET_GURUPAY_EUR not found in .env');
+  }
+
+  console.log(`Selecting wallet from context: ${walletName}`);
+
   // Ждём появления списка после клика
-  await this.page.locator('.dropdown-list-wrap .dropdown-list-item').first().waitFor({ state: 'visible' });
+  await this.page.locator('.dropdown-list-wrap .dropdown-list-item').first().waitFor({
+    state: 'visible',
+    timeout: 5000,
+  });
 
   // Кликаем по нужному кошельку
   await this.page.locator('.dropdown-list-wrap .dropdown-list-item', { hasText: walletName }).click();
 
-  // Таймаут, чтобы успела появиться кнопка Submit
-  await this.page.waitForTimeout(3000);
+  console.log(`Wallet "${walletName}" selected in Buy Crypto form`);
 });
 
 // Нажатие на кнопку Submit для завершения покупки крипты

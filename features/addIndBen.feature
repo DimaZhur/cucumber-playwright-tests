@@ -6,7 +6,7 @@ Feature: Add individual beneficiary
 Background:
   Given I navigate to the login page
   When I login with valid credentials
-  And I enter the MFA code "111111"
+  And I enter the MFA code
 
     
 Scenario: Create a new individual beneficiary

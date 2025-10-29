@@ -38,7 +38,7 @@ When('I fill the report name with {string}', async function (baseName) {
   // Сохраняем в контексте, чтобы использовать в следующих шагах
   this.latestReportName = reportName;
 
-  console.log(`📝 Report name filled: ${reportName}`);
+  console.log(`Report name filled: ${reportName}`);
 });
 
 // Нажатие на кнопку Create report для завершения создания отчета

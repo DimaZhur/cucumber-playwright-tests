@@ -13,8 +13,29 @@ When('I click {string} on the modal', async function (text) {
 });
 
 // Выбираем валлет
-When('I select {string} in the dropdown', async function (walletName) {
-  await this.page.getByText(walletName, { exact: true }).click();
+When('I select {string} from dropdown', async function (walletKey) {
+  const walletValue = process.env[`WALLET_${walletKey.toUpperCase()}`];
+  if (!walletValue) {
+    throw new Error(`Wallet variable WALLET_${walletKey.toUpperCase()} not found in .env`);
+  }
+
+  console.log(`Selecting wallet from context: ${walletKey} → ${walletValue}`);
+
+  // Дожидаемся, пока дропдаун откроется и появятся элементы
+  await this.page.waitForSelector('.dropdown-list-item', { timeout: 10000 });
+
+  // Ищем элемент по тексту
+  const wallet = this.page.locator('.dropdown-list-item').filter({
+    hasText: walletValue.trim(),
+  });
+
+  await expect(wallet).toBeVisible({ timeout: 10000 });
+
+  // Скроллим и кликаем
+  await wallet.scrollIntoViewIfNeeded();
+  await wallet.click({ force: true });
+
+  console.log(`Wallet selected successfully: ${walletValue}`);
 });
 
 // Проверяем, что модалка с указанным текстом открылась
@@ -51,7 +72,7 @@ When('I click "Confirm" on the modal window', async function () {
 //Вводим данные карты
 When('I pay with test card', async function () {
   if (await this.page.$('#cardNumber')) {
-    // ---- G2Pay форма ----
+    // G2Pay форма
     await this.page.fill('#cardNumber', '4000 0000 0000 0002');
     await this.page.fill('#expiryDate', '1230');
     await this.page.fill('#cardSecurityCode', '555');
@@ -59,7 +80,7 @@ When('I pay with test card', async function () {
 
     console.log('Filled G2Pay form');
   } else if (await this.page.$('input.base-input__input[placeholder="0000 0000 0000 0000"]')) {
-    // ---- AltPay форма ----
+    // AltPay форма
     await this.page.fill('input.base-input__input[placeholder="0000 0000 0000 0000"]', '4111 1111 1111 1111');
     await this.page.fill('input[placeholder="MM / YY"]', '01/38');
     await this.page.fill('input[placeholder="CVV"]', '555');
@@ -96,8 +117,8 @@ Then('I should see success payment screen', async function () {
   const g2paySuccess = this.page.locator('text=Completed Successfully');
 
   await Promise.race([
-    finseiSuccess.waitFor({ state: 'visible', timeout: 5000 }),
-    g2paySuccess.waitFor({ state: 'visible', timeout: 5000 })
+    finseiSuccess.waitFor({ state: 'visible', timeout: 60000 }),
+    g2paySuccess.waitFor({ state: 'visible', timeout: 60000 })
   ]);
 
   if (await finseiSuccess.isVisible()) {

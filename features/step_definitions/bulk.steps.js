@@ -55,10 +55,29 @@ When('I open the wallet dropdown', async function () {
   await field.click();
 });
 
-// Выбираем валлет
-When('I click on wallet {string}', async function (walletName) {
-  await this.page.getByText(walletName, { exact: true }).click();
+
+// Выбираем кошелёк по ключу из .env
+When('I click on wallet {string}', async function (walletKey) {
+  const walletValue = process.env[`WALLET_${walletKey.toUpperCase()}`];
+  if (!walletValue) {
+    throw new Error(`Wallet variable WALLET_${walletKey.toUpperCase()} not found in environment`);
+  }
+
+  await this.page.waitForSelector('div.dropdown-list-item.ellipses', {
+    state: 'visible',
+    timeout: 10000
+  });
+
+  const wallet = this.page.locator(`div.dropdown-list-item.ellipses:has-text("${walletValue}")`);
+  await expect(wallet).toBeVisible({ timeout: 10000 });
+  await wallet.click();
+
+  // Сохраняем текущий ID кошелька в контекст
+  this.currentWalletId = walletValue.split('_')[0];
+
+  console.log(`Selected wallet from context: ${walletValue}`);
 });
+
 
 // Клик по кнопке Next
 When('I click {string} to proceed to the next step', async function (buttonText) {
@@ -90,10 +109,21 @@ Then('I should see bulk payment {string} at current time', async function (amoun
   await expect(transactionRow).toBeVisible({ timeout: 10000 });
 });
 
-// Проверяем, что URL содержит нужный walletId
-Then('I should be on I should be on the page of the wallet {string} that was used', async function (walletId) {
-  await expect(this.page).toHaveURL(new RegExp(`/wallet/${walletId}$`));
+Then('I should be on the page of the wallet that was used', async function () {
+  if (!this.currentWalletId) {
+    throw new Error('❌ No wallet ID stored in context. Did you select a wallet earlier?');
+  }
+
+  // Проверяем URL
+  await expect(this.page).toHaveURL(new RegExp(`/wallet/${this.currentWalletId}$`));
+
+  // Проверяем, что сам кошелёк виден на странице
+  const walletHeader = this.page.locator(`text=${this.currentWalletId}`);
+  await expect(walletHeader).toBeVisible({ timeout: 10000 });
+
+  console.log(`Verified: user is on the wallet page ${this.currentWalletId}`);
 });
+
 
 
 

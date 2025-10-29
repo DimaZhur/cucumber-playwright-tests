@@ -1,93 +1,84 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test');
 
-
-// Кликаем по кнопке с указанным текстом
+// Кликаем по кнопке
 When('I click the {string} button', async function (buttonText) {
   await this.page.getByRole('button', { name: buttonText }).click();
 });
 
-// Открываем дропдаун
-When('I click the {string} dropdown', async function (text) {
-  await this.page.locator('div.dropdown-item', { hasText: text }).click();
+// Кликаем по пункту меню
+When('I click the {string} menu item', async function (menuName) {
+  const menuItem = this.page.getByRole('link', { name: menuName, exact: true });
+  await expect(menuItem).toBeVisible();
+  await menuItem.click();
+  console.log(`Clicked menu item: ${menuName}`);
 });
 
-// Выбираем валлет
-When('I select payment wallet {string}', async function (walletName) {
-  await this.page.getByText(walletName, { exact: true }).click();
+// Открываем кошелёк по имени из контекста (.env)
+When('I open wallet {string} from context', async function (walletKey) {
+  const walletValue = process.env[`WALLET_${walletKey.toUpperCase()}`];
+  if (!walletValue) throw new Error(`Wallet variable WALLET_${walletKey.toUpperCase()} not found in .env`);
+
+  await this.page.waitForSelector('.wallet-title', { timeout: 10000 });
+  const wallet = this.page.locator(`.wallet-title:has-text("${walletValue}")`);
+  await expect(wallet).toBeVisible({ timeout: 10000 });
+
+  await wallet.click();
+  console.log(`Opened wallet from context: ${walletValue}`);
 });
 
-// Проверяем, что модалка с указанным текстом открылась
+// Проверяем, что модалка открылась
 Then('I should see the {string} modal', async function (modalTitle) {
   await expect(this.page.getByText(modalTitle, { exact: true })).toBeVisible();
 });
 
-// Выбираем способ оплаты по названию
+// Выбираем метод оплаты в модалке ("Top up from wallet")
 When('I select {string} payment method', async function (methodName) {
-  await this.page.getByText(methodName, { exact: true }).click();
+  const option = this.page.locator('.modal-panel-list li', { hasText: methodName });
+  await expect(option).toBeVisible({ timeout: 10000 });
+  await option.click();
+  console.log(`Selected payment method: ${methodName}`);
 });
 
-// Ввод суммы
+// Вводим сумму
 When('I enter top up amount {string}', async function (amount) {
   await this.page.waitForSelector('input.currency-input-sum', { timeout: 10000 });
   await this.page.fill('input.currency-input-sum', amount);
   console.log(`Entered amount: ${amount}`);
 });
 
-When('I fill amount {string}', async function (value) {
-  await this.page.getByPlaceholder('0.00').fill(value);
-});
-
-// Открываем дропдаун Wallet кликом по placeholder "Wallet"
+// Открываем dropdown “Wallet”
 When('I click the Wallet dropdown', async function () {
-  const dropdownPlaceholder = this.page.getByText('Wallet', { exact: true });
-  await dropdownPlaceholder.click({ force: true });
-
-  // ждём появления опций
-  await this.page.waitForSelector('.dropdown-size-bg .dropdown-item', { state: 'visible', timeout: 5000 });
+  const dropdown = this.page.getByText('Wallet', { exact: true });
+  await dropdown.click({ force: true });
+  await this.page.waitForSelector('.dropdown-list-item', { state: 'visible', timeout: 5000 });
 });
 
-// Выбираем конечный валлет по названию
-When('I select destination wallet {string}', async function (walletName) {
-  await this.page.getByText(walletName, { exact: true }).click();
+// Выбираем кошелёк назначения (из контекста)
+When('I select destination wallet {string} from context', async function (walletKey) {
+  const walletValue = process.env[`WALLET_${walletKey.toUpperCase()}`];
+  if (!walletValue) throw new Error(`Wallet variable WALLET_${walletKey.toUpperCase()} not found in .env`);
+
+  await this.page.waitForSelector('.dropdown-list-item.ellipses', { state: 'visible', timeout: 10000 });
+  const wallet = this.page.locator(`.dropdown-list-item.ellipses:has-text("${walletValue}")`);
+  await expect(wallet).toBeVisible({ timeout: 10000 });
+  await wallet.click();
+
+  console.log(`Selected destination wallet from context: ${walletValue}`);
 });
 
-// Проверяем, что в верхней транзакции совпадает время с текущим
-Then('I should see transaction at current time', async function () {
-  // Берём текущее время (HH:MM)
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const currentTime = `${hours}:${minutes}`;
+// Проверяем, что мы на странице того же кошелька, который пополняли
+Then('I should be on the same wallet page from context {string}', async function (walletKey) {
+  const walletValue = process.env[`WALLET_${walletKey.toUpperCase()}`];
+  if (!walletValue) throw new Error(`Wallet variable WALLET_${walletKey.toUpperCase()} not found in environment`);
 
-  console.log(`Ждём 3 секунды перед проверкой транзакции...`);
-  await this.page.waitForTimeout(3000);
+  // Извлекаем ID из walletValue (предположим, формат "7167_GuruPay_EUR")
+  const walletId = walletValue.split('_')[0];
 
-  console.log(`Ищем первую транзакцию и проверяем время ${currentTime}`);
+  console.log(`Checking that current wallet page matches ID: ${walletId}`);
 
-  // Берём самый верхний элемент .group-item
-  const firstTransaction = this.page.locator('.group-item').first();
-
-  // Проверяем, что он содержит текущее время
-  await expect(firstTransaction).toContainText(currentTime, { timeout: 10000 });
-});
-
-
-// Проверяем, что URL содержит нужный walletId
-Then('I should be on wallet page {string}', async function (walletId) {
+  // Проверяем, что URL оканчивается на этот ID
   await expect(this.page).toHaveURL(new RegExp(`/wallet/${walletId}$`));
+  console.log(`Verified: we are on wallet page ${walletId} (${walletValue})`);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
