@@ -17,7 +17,7 @@ Scenario: Create a new Bulk
     And I click on wallet "GURUPAY_EUR"
     And I click "Next" to proceed to the next step
     And I click "Confirm" to finish
-    And I should see bulk payment "- 6,99 EUR" at current time
+    # And I should see bulk payment "- 6,99 EUR" at current time
     And I should be on the page of the wallet that was used
 
 

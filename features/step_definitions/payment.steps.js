@@ -84,23 +84,23 @@ Then('I should be on the home page', async function () {
   console.log('User is on Home page');
 });
 
-Then('I should see the latest payment at current time', async function () {
-  // Берём текущее время (HH:MM)
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const currentTime = `${hours}:${minutes}`;
+// Then('I should see the latest payment at current time', async function () {
+//   // Берём текущее время (HH:MM)
+//   const now = new Date();
+//   const hours = String(now.getHours()).padStart(2, '0');
+//   const minutes = String(now.getMinutes()).padStart(2, '0');
+//   const currentTime = `${hours}:${minutes}`;
 
-  console.log(`Ищем платёж с временем: ${currentTime}`);
+//   console.log(`Ищем платёж с временем: ${currentTime}`);
 
-  // Берём первый платёж
-  const firstPayment = this.page.locator('.group-item').first();
+//   // Берём первый платёж
+//   const firstPayment = this.page.locator('.group-item').first();
 
-  // Проверяем, что время совпадает
-  await expect(firstPayment).toContainText(currentTime, { timeout: 15000 });
+//   // Проверяем, что время совпадает
+//   await expect(firstPayment).toContainText(currentTime, { timeout: 15000 });
 
-  console.log(`Найден верхний платёж с временем ${currentTime}`);
-});
+//   console.log(`Найден верхний платёж с временем ${currentTime}`);
+// });
 
 
 

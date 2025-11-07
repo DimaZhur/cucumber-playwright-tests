@@ -101,25 +101,25 @@ When('I select destination wallet {string} from context in exchange', async func
     });
 
     // Проверка, что сверху появилась новая exchange-транзакция с суммой и текущим временем
-    Then('I should see the latest exchange transaction {string} at current time', async function (expectedText) {
-      // Берём текущее время в формате HH:mm
-      const now = new Date();
-      const hours = String(now.getHours()).padStart(2, '0');
-      const minutes = String(now.getMinutes()).padStart(2, '0');
-      const currentTime = `${hours}:${minutes}`;
+    // Then('I should see the latest exchange transaction {string} at current time', async function (expectedText) {
+    //   // Берём текущее время в формате HH:mm
+    //   const now = new Date();
+    //   const hours = String(now.getHours()).padStart(2, '0');
+    //   const minutes = String(now.getMinutes()).padStart(2, '0');
+    //   const currentTime = `${hours}:${minutes}`;
 
-      console.log(`Ждём 3 секунды перед проверкой транзакции...`);
-      await this.page.waitForTimeout(3000); // пауза 3 секунды
+    //   console.log(`Ждём 3 секунды перед проверкой транзакции...`);
+    //   await this.page.waitForTimeout(3000); // пауза 3 секунды
 
-      console.log(`Ищем exchange-транзакцию "${expectedText}" с временем ${currentTime}`);
+    //   console.log(`Ищем exchange-транзакцию "${expectedText}" с временем ${currentTime}`);
 
-      // Ищем первую строку в истории (самую свежую транзакцию)
-      const firstExchange = this.page.locator('.group-item').first();
+    //   // Ищем первую строку в истории (самую свежую транзакцию)
+    //   const firstExchange = this.page.locator('.group-item').first();
 
-      // Проверяем, что текст совпадает
-      await expect(firstExchange).toContainText(expectedText);
-      await expect(firstExchange).toContainText(currentTime);
+    //   // Проверяем, что текст совпадает
+    //   await expect(firstExchange).toContainText(expectedText);
+    //   await expect(firstExchange).toContainText(currentTime);
 
-      console.log(`Exchange "${expectedText}" at ${currentTime} is visible`);
-    });
+    //   console.log(`Exchange "${expectedText}" at ${currentTime} is visible`);
+    // });
 

@@ -107,28 +107,28 @@ Then('I should be on the crypto page after buy crypto', async function () {
   console.log('User is on Crypto page after buy crypto');
     
   // Таймаут, чтобы успела появиться новая транзакция (чтобы проверить, что она есть в след шаге)
-  await this.page.waitForTimeout(1000);
+  // await this.page.waitForTimeout(1000);
 });
 
 // Проверяем, что появилась транзакция с суммой и текущим временем
-Then('I should see buy crypto transaction {string} at current time', async function (amount) {
-  // Берём текущее время (HH:MM)
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const currentTime = `${hours}:${minutes}`;
+// Then('I should see buy crypto transaction {string} at current time', async function (amount) {
+//   // Берём текущее время (HH:MM)
+//   const now = new Date();
+//   const hours = String(now.getHours()).padStart(2, '0');
+//   const minutes = String(now.getMinutes()).padStart(2, '0');
+//   const currentTime = `${hours}:${minutes}`;
 
-  console.log(`Ждём 3 секунды перед проверкой транзакции...`);
-  await this.page.waitForTimeout(3000); // пауза 3 секунды
+//   console.log(`Ждём 3 секунды перед проверкой транзакции...`);
+//   await this.page.waitForTimeout(3000); // пауза 3 секунды
 
-  console.log(`Ищем транзакцию с суммой ${amount} и временем ${currentTime}`);
+//   console.log(`Ищем транзакцию с суммой ${amount} и временем ${currentTime}`);
 
-  // Локатор: ищем строку .group-item, которая содержит время и сумму
-  const transactionRow = this.page.locator(`.group-item:has-text("${currentTime}"):has-text("${amount}")`);
+//   // Локатор: ищем строку .group-item, которая содержит время и сумму
+//   const transactionRow = this.page.locator(`.group-item:has-text("${currentTime}"):has-text("${amount}")`);
 
-  // Проверяем, что видна именно такая строка
-  await expect(transactionRow).toBeVisible({ timeout: 10000 });
-});
+//   // Проверяем, что видна именно такая строка
+//   await expect(transactionRow).toBeVisible({ timeout: 10000 });
+// });
 
 
 

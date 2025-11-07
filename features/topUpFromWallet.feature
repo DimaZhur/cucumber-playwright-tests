@@ -10,7 +10,7 @@ Background:
 
 Scenario: Create a new top up from wallet
     When I click the "Wallets" menu item
-    And I open wallet "GURUPAY_EUR" from context
+    And I open wallet "IFX_EUR" from context
     And I click the "Top up" button
     Then I should see the "How would you like to pay?" modal
     And I select "Top up from wallet" payment method
@@ -18,5 +18,5 @@ Scenario: Create a new top up from wallet
     And I click the Wallet dropdown
     And I select destination wallet "WALLESTER_EUR" from context
     And I click the "Confirm" button
-    Then I should be on the same wallet page from context "GURUPAY_EUR"
+    Then I should be on the same wallet page from context "IFX_EUR"
 

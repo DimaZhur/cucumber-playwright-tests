@@ -23,7 +23,6 @@
   "test:report:all": "npm-run-all -s --continue-on-error test:report:individual test:report:business test:report:sandbox:individual test:report:sandbox:business"
 },
 
-
   "repository": {
     "type": "git",
     "url": "git@github-tests:qazhurauleu-ai/cucumber-playwright-tests.git"

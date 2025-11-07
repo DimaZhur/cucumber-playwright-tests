@@ -54,7 +54,7 @@ When('I click the Wallet dropdown', async function () {
   await this.page.waitForSelector('.dropdown-list-item', { state: 'visible', timeout: 5000 });
 });
 
-// Выбираем кошелёк назначения (из контекста)
+// Выбираем кошелёк (из контекста)
 When('I select destination wallet {string} from context', async function (walletKey) {
   const walletValue = process.env[`WALLET_${walletKey.toUpperCase()}`];
   if (!walletValue) throw new Error(`Wallet variable WALLET_${walletKey.toUpperCase()} not found in .env`);

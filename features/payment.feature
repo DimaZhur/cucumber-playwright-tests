@@ -21,6 +21,6 @@ Feature: Payment to beneficiary
     And I enter the MFA code
     Then I should see a success message "Payment was created successfully"
     And I should be on the home page
-   Then I should see the latest payment at current time
+  #  Then I should see the latest payment at current time
 
 

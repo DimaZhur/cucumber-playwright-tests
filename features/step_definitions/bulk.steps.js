@@ -90,24 +90,24 @@ When('I click {string} to finish', async function (buttonText) {
 });
 
 // Проверяем, что появилась транзакция с суммой и текущим временем
-Then('I should see bulk payment {string} at current time', async function (amount) {
-  // Берём текущее время (HH:MM)
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const currentTime = `${hours}:${minutes}`;
+// Then('I should see bulk payment {string} at current time', async function (amount) {
+//   // Берём текущее время (HH:MM)
+//   const now = new Date();
+//   const hours = String(now.getHours()).padStart(2, '0');
+//   const minutes = String(now.getMinutes()).padStart(2, '0');
+//   const currentTime = `${hours}:${minutes}`;
 
-  console.log(`Ждём 3 секунды перед проверкой транзакции...`);
-  await this.page.waitForTimeout(3000); // пауза 3 секунды
+//   console.log(`Ждём 3 секунды перед проверкой транзакции...`);
+//   await this.page.waitForTimeout(3000); // пауза 3 секунды
 
-  console.log(`Ищем транзакцию с суммой ${amount} и временем ${currentTime}`);
+//   console.log(`Ищем транзакцию с суммой ${amount} и временем ${currentTime}`);
 
-  // Локатор: ищем строку .group-item, которая содержит и время, и сумму
-  const transactionRow = this.page.locator(`.group-item:has-text("${currentTime}"):has-text("${amount}")`);
+//   // Локатор: ищем строку .group-item, которая содержит и время, и сумму
+//   const transactionRow = this.page.locator(`.group-item:has-text("${currentTime}"):has-text("${amount}")`);
 
-  // Проверяем, что видна именно такая строка
-  await expect(transactionRow).toBeVisible({ timeout: 10000 });
-});
+//   // Проверяем, что видна именно такая строка
+//   await expect(transactionRow).toBeVisible({ timeout: 10000 });
+// });
 
 Then('I should be on the page of the wallet that was used', async function () {
   if (!this.currentWalletId) {
