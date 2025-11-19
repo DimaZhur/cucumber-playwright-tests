@@ -6,7 +6,7 @@
         "description": "",
         "id": "add-company-beneficiary;create-a-new-company-beneficiary",
         "keyword": "Scenario",
-        "line": 12,
+        "line": 13,
         "name": "Create a new company beneficiary",
         "steps": [
           {
@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 255699
+              "duration": 278999
             }
           },
           {
@@ -22,7 +22,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 189885300
+              "duration": 92265099
             }
           },
           {
@@ -35,7 +35,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1612256700
+              "duration": 1742888499
             }
           },
           {
@@ -48,7 +48,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 51748700
+              "duration": 87974900
             }
           },
           {
@@ -61,124 +61,124 @@
             },
             "result": {
               "status": "passed",
-              "duration": 832738800
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 13,
-            "name": "I go to the Beneficiaries page",
-            "match": {
-              "location": "features\\step_definitions\\addCompBen.steps.js:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1369957600
+              "duration": 846180800
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 14,
-            "name": "I click on \"Add beneficiary\" on the page",
+            "name": "I go to the Beneficiaries page",
             "match": {
-              "location": "features\\step_definitions\\addCompBen.steps.js:14"
+              "location": "features\\step_definitions\\addCompBen.steps.js:8"
             },
             "result": {
               "status": "passed",
-              "duration": 339333000
+              "duration": 1873514199
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 15,
-            "name": "I click on \"Company\" tab on the modal Add beneficiary",
+            "name": "I click on \"Add beneficiary\" on the page",
             "match": {
-              "location": "features\\step_definitions\\addCompBen.steps.js:19"
+              "location": "features\\step_definitions\\addCompBen.steps.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 221262099
+              "duration": 339385500
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 16,
-            "name": "I select currency \"EUR\" on the modal",
+            "name": "I click on \"Company\" tab on the modal Add beneficiary",
             "match": {
-              "location": "features\\step_definitions\\addCompBen.steps.js:24"
+              "location": "features\\step_definitions\\addCompBen.steps.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 69199399
+              "duration": 238946899
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 17,
-            "name": "I fill a company beneficiary info in the form with name \"A test company ben\"",
+            "name": "I select currency \"EUR\" on the modal",
             "match": {
-              "location": "features\\step_definitions\\addCompBen.steps.js:36"
+              "location": "features\\step_definitions\\addCompBen.steps.js:24"
             },
             "result": {
               "status": "passed",
-              "duration": 15686300
+              "duration": 86339700
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 18,
-            "name": "I fill IBAN field with random Austrian IBAN on the modal",
+            "name": "I fill a company beneficiary info in the form with name \"A test company ben\"",
             "match": {
-              "location": "features\\step_definitions\\addCompBen.steps.js:56"
+              "location": "features\\step_definitions\\addCompBen.steps.js:36"
             },
             "result": {
               "status": "passed",
-              "duration": 4257500
+              "duration": 21570499
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 19,
+            "name": "I fill IBAN field with random Austrian IBAN on the modal",
+            "match": {
+              "location": "features\\step_definitions\\addCompBen.steps.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8478099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
             "name": "I click Add beneficiary on the modal",
             "match": {
               "location": "features\\step_definitions\\addCompBen.steps.js:62"
             },
             "result": {
               "status": "passed",
-              "duration": 392655199
+              "duration": 383121000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 20,
+            "line": 21,
             "name": "I should see a success message \"Beneficiary has been created\"",
             "match": {
               "location": "features\\step_definitions\\common.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 130489899
+              "duration": 400954799
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 21,
+            "line": 22,
             "name": "I should see the new beneficiary on the dashboard",
             "match": {
               "location": "features\\step_definitions\\addCompBen.steps.js:73"
             },
             "result": {
               "status": "passed",
-              "duration": 117779300
+              "duration": 3170699
             }
           },
           {
@@ -186,7 +186,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 12562799
+              "duration": 22411799
             }
           }
         ],
@@ -216,7 +216,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 40799
+              "duration": 38599
             }
           },
           {
@@ -224,7 +224,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 46092899
+              "duration": 64091899
             }
           },
           {
@@ -237,7 +237,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1707039000
+              "duration": 1600527699
             }
           },
           {
@@ -250,7 +250,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 87455600
+              "duration": 44951600
             }
           },
           {
@@ -263,7 +263,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 831411799
+              "duration": 854280500
             }
           },
           {
@@ -276,7 +276,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2371405899
+              "duration": 1884973200
             }
           },
           {
@@ -289,7 +289,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 357712900
+              "duration": 338002499
             }
           },
           {
@@ -302,7 +302,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 257323899
+              "duration": 294310600
             }
           },
           {
@@ -315,7 +315,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 16215999
+              "duration": 20731899
             }
           },
           {
@@ -328,7 +328,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4315000
+              "duration": 8556000
             }
           },
           {
@@ -341,7 +341,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 390360799
+              "duration": 381947500
             }
           },
           {
@@ -354,7 +354,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 389111599
+              "duration": 403631199
             }
           },
           {
@@ -367,7 +367,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2383400
+              "duration": 2522800
             }
           },
           {
@@ -375,7 +375,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 11864900
+              "duration": 20596099
             }
           }
         ],
@@ -405,7 +405,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 40200
+              "duration": 25799
             }
           },
           {
@@ -413,7 +413,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 47764699
+              "duration": 59069999
             }
           },
           {
@@ -426,7 +426,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1249218499
+              "duration": 1735472599
             }
           },
           {
@@ -439,7 +439,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 51734599
+              "duration": 49068300
             }
           },
           {
@@ -452,7 +452,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1360303600
+              "duration": 816077800
             }
           },
           {
@@ -465,7 +465,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1907731900
+              "duration": 1870907100
             }
           },
           {
@@ -478,7 +478,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 217834499
+              "duration": 231791600
             }
           },
           {
@@ -491,7 +491,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 744708300
+              "duration": 748662599
             }
           },
           {
@@ -504,7 +504,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 757231900
+              "duration": 774563799
             }
           },
           {
@@ -517,7 +517,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23413599
+              "duration": 28153200
             }
           },
           {
@@ -530,7 +530,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 364432999
+              "duration": 373447899
             }
           },
           {
@@ -543,7 +543,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2152799
+              "duration": 1945700
             }
           },
           {
@@ -551,7 +551,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 11992999
+              "duration": 21115900
             }
           }
         ],
@@ -581,7 +581,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 33999
+              "duration": 36700
             }
           },
           {
@@ -589,7 +589,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 46687200
+              "duration": 61128199
             }
           },
           {
@@ -602,7 +602,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1740622500
+              "duration": 1715890200
             }
           },
           {
@@ -615,7 +615,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 53900100
+              "duration": 42422000
             }
           },
           {
@@ -628,7 +628,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1358016999
+              "duration": 823979800
             }
           },
           {
@@ -641,7 +641,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1877634000
+              "duration": 1863400599
             }
           },
           {
@@ -654,7 +654,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 109093099
+              "duration": 109054399
             }
           },
           {
@@ -667,7 +667,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 69724000
+              "duration": 72844100
             }
           },
           {
@@ -680,7 +680,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4687599
+              "duration": 4684699
             }
           },
           {
@@ -693,7 +693,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 929436599
+              "duration": 911316999
             }
           },
           {
@@ -706,7 +706,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 32943899
+              "duration": 33563799
             }
           },
           {
@@ -719,7 +719,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 32582900
+              "duration": 34071400
             }
           },
           {
@@ -732,7 +732,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29772899
+              "duration": 29900900
             }
           },
           {
@@ -745,7 +745,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 868181100
+              "duration": 878386800
             }
           },
           {
@@ -753,7 +753,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 12680799
+              "duration": 20004799
             }
           }
         ],
@@ -783,7 +783,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 28099
+              "duration": 23400
             }
           },
           {
@@ -791,7 +791,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 47447500
+              "duration": 53841599
             }
           },
           {
@@ -804,7 +804,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1704173299
+              "duration": 1243403900
             }
           },
           {
@@ -817,7 +817,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 53853699
+              "duration": 56634099
             }
           },
           {
@@ -830,7 +830,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 834390599
+              "duration": 844254700
             }
           },
           {
@@ -843,7 +843,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1349587499
+              "duration": 1360009399
             }
           },
           {
@@ -856,7 +856,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 134299699
+              "duration": 132254700
             }
           },
           {
@@ -869,7 +869,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 265152599
+              "duration": 265878700
             }
           },
           {
@@ -882,7 +882,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6205200
+              "duration": 6182700
             }
           },
           {
@@ -895,7 +895,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7551699
+              "duration": 10614799
             }
           },
           {
@@ -908,7 +908,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 14915500
+              "duration": 15665600
             }
           },
           {
@@ -921,7 +921,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 37724500
+              "duration": 36755900
             }
           },
           {
@@ -934,7 +934,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1035251899
+              "duration": 1038319199
             }
           },
           {
@@ -947,7 +947,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 25550699
+              "duration": 28744799
             }
           },
           {
@@ -960,7 +960,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 872124599
+              "duration": 881302299
             }
           },
           {
@@ -973,7 +973,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2517500
+              "duration": 2205799
             }
           },
           {
@@ -981,7 +981,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 12101899
+              "duration": 20702900
             }
           }
         ],
@@ -1011,7 +1011,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 36299
+              "duration": 26000
             }
           },
           {
@@ -1019,7 +1019,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 47000100
+              "duration": 54743299
             }
           },
           {
@@ -1032,7 +1032,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1314567799
+              "duration": 1721107599
             }
           },
           {
@@ -1045,7 +1045,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 87843600
+              "duration": 52138400
             }
           },
           {
@@ -1058,7 +1058,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 812027399
+              "duration": 828742200
             }
           },
           {
@@ -1071,7 +1071,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1868495499
+              "duration": 1853655899
             }
           },
           {
@@ -1084,7 +1084,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 35965699
+              "duration": 39549700
             }
           },
           {
@@ -1097,7 +1097,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 130596499
+              "duration": 110200600
             }
           },
           {
@@ -1110,7 +1110,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 117727599
+              "duration": 117976499
             }
           },
           {
@@ -1123,7 +1123,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 132551500
+              "duration": 132853600
             }
           },
           {
@@ -1136,7 +1136,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 839211999
+              "duration": 841970300
             }
           },
           {
@@ -1149,7 +1149,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 890099099
+              "duration": 897462200
             }
           },
           {
@@ -1162,7 +1162,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 43946599
+              "duration": 34398199
             }
           },
           {
@@ -1175,7 +1175,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 327936699
+              "duration": 329541199
             }
           },
           {
@@ -1188,7 +1188,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 843202900
+              "duration": 839187799
             }
           },
           {
@@ -1201,7 +1201,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1356248700
+              "duration": 1342133399
             }
           },
           {
@@ -1214,7 +1214,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 33266599
+              "duration": 37753199
             }
           },
           {
@@ -1227,7 +1227,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 113242400
+              "duration": 112949500
             }
           },
           {
@@ -1240,7 +1240,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 117384200
+              "duration": 117815900
             }
           },
           {
@@ -1253,7 +1253,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 116877900
+              "duration": 131996999
             }
           },
           {
@@ -1266,7 +1266,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 832663000
+              "duration": 817813099
             }
           },
           {
@@ -1279,7 +1279,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 876989700
+              "duration": 882675999
             }
           },
           {
@@ -1287,7 +1287,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 12309000
+              "duration": 20179799
             }
           }
         ],
@@ -1317,7 +1317,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 32300
+              "duration": 23100
             }
           },
           {
@@ -1325,7 +1325,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 45758099
+              "duration": 56730600
             }
           },
           {
@@ -1338,7 +1338,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1706881300
+              "duration": 2349811400
             }
           },
           {
@@ -1351,7 +1351,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 76545399
+              "duration": 46318599
             }
           },
           {
@@ -1364,7 +1364,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 840569100
+              "duration": 1332265299
             }
           },
           {
@@ -1377,7 +1377,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1860494200
+              "duration": 2371724899
             }
           },
           {
@@ -1390,7 +1390,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 372648699
+              "duration": 371049400
             }
           },
           {
@@ -1403,7 +1403,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 9262000
+              "duration": 13337899
             }
           },
           {
@@ -1416,7 +1416,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 34386800
+              "duration": 48650499
             }
           },
           {
@@ -1429,7 +1429,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 48492900
+              "duration": 48568400
             }
           },
           {
@@ -1442,7 +1442,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 114887900
+              "duration": 119218899
             }
           },
           {
@@ -1455,7 +1455,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 151237300
+              "duration": 47777699
             }
           },
           {
@@ -1468,7 +1468,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 539289499
+              "duration": 535231899
             }
           },
           {
@@ -1481,7 +1481,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 21801999
+              "duration": 27404500
             }
           },
           {
@@ -1494,7 +1494,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 366240100
+              "duration": 879493600
             }
           },
           {
@@ -1507,7 +1507,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4701699
+              "duration": 2955000
             }
           },
           {
@@ -1515,7 +1515,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 13428400
+              "duration": 19498899
             }
           }
         ],
@@ -1545,7 +1545,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 25000
+              "duration": 24499
             }
           },
           {
@@ -1553,7 +1553,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 46092500
+              "duration": 55735000
             }
           },
           {
@@ -1566,7 +1566,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1518362300
+              "duration": 1728990099
             }
           },
           {
@@ -1579,7 +1579,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 87615799
+              "duration": 48434000
             }
           },
           {
@@ -1592,7 +1592,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 828993699
+              "duration": 1352439899
             }
           },
           {
@@ -1605,7 +1605,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1367458500
+              "duration": 1849229600
             }
           },
           {
@@ -1618,7 +1618,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 38567100
+              "duration": 37480499
             }
           },
           {
@@ -1631,7 +1631,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 113056699
+              "duration": 112290399
             }
           },
           {
@@ -1644,7 +1644,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 152907500
+              "duration": 170088799
             }
           },
           {
@@ -1657,7 +1657,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 81805000
+              "duration": 92176599
             }
           },
           {
@@ -1670,7 +1670,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7491000
+              "duration": 8625299
             }
           },
           {
@@ -1683,7 +1683,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 554769400
+              "duration": 541074999
             }
           },
           {
@@ -1696,7 +1696,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23559200
+              "duration": 24708599
             }
           },
           {
@@ -1709,7 +1709,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 336491199
+              "duration": 823144000
             }
           },
           {
@@ -1722,7 +1722,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 44654999
+              "duration": 44529199
             }
           },
           {
@@ -1735,7 +1735,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 46022499
+              "duration": 4816200
             }
           },
           {
@@ -1743,7 +1743,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 11694900
+              "duration": 21182300
             }
           }
         ],
@@ -1773,7 +1773,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 23699
+              "duration": 25300
             }
           },
           {
@@ -1781,7 +1781,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 49573600
+              "duration": 54505799
             }
           },
           {
@@ -1794,7 +1794,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1696963499
+              "duration": 926005799
             }
           },
           {
@@ -1807,7 +1807,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 43629600
+              "duration": 41634400
             }
           },
           {
@@ -1820,7 +1820,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 829328300
+              "duration": 1334230300
             }
           },
           {
@@ -1833,7 +1833,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1840303899
+              "duration": 1826934699
             }
           },
           {
@@ -1841,7 +1841,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 14246800
+              "duration": 23503799
             }
           }
         ],
@@ -1871,7 +1871,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 25099
+              "duration": 23600
             }
           },
           {
@@ -1879,7 +1879,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 47871200
+              "duration": 65044600
             }
           },
           {
@@ -1892,7 +1892,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1642916600
+              "duration": 1739710700
             }
           },
           {
@@ -1905,7 +1905,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 74535499
+              "duration": 47173400
             }
           },
           {
@@ -1918,7 +1918,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 854389000
+              "duration": 847665500
             }
           },
           {
@@ -1931,7 +1931,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1879925799
+              "duration": 1873957300
             }
           },
           {
@@ -1944,7 +1944,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2911599
+              "duration": 2341300
             }
           },
           {
@@ -1957,7 +1957,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 197164399
+              "duration": 184405999
             }
           },
           {
@@ -1970,7 +1970,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 33447700
+              "duration": 46986199
             }
           },
           {
@@ -1983,7 +1983,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 20933499
+              "duration": 23592399
             }
           },
           {
@@ -1996,7 +1996,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 91959799
+              "duration": 91776100
             }
           },
           {
@@ -2009,7 +2009,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 41622999
+              "duration": 48357099
             }
           },
           {
@@ -2022,7 +2022,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 42065600
+              "duration": 31880500
             }
           },
           {
@@ -2035,7 +2035,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 32146899
+              "duration": 37129899
             }
           },
           {
@@ -2048,7 +2048,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5784499
+              "duration": 8261299
             }
           },
           {
@@ -2061,7 +2061,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 26905500
+              "duration": 36003599
             }
           },
           {
@@ -2074,7 +2074,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 463317500
+              "duration": 381649799
             }
           },
           {
@@ -2087,7 +2087,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 341282800
+              "duration": 341192899
             }
           },
           {
@@ -2100,7 +2100,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 365858099
+              "duration": 374537700
             }
           },
           {
@@ -2108,7 +2108,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 11415299
+              "duration": 20748200
             }
           }
         ],
@@ -2130,7 +2130,7 @@
         "description": "",
         "id": "payment-to-beneficiary;create-a-new-payment",
         "keyword": "Scenario",
-        "line": 11,
+        "line": 12,
         "name": "Create a new payment",
         "steps": [
           {
@@ -2138,7 +2138,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 31800
+              "duration": 25399
             }
           },
           {
@@ -2146,7 +2146,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 45847800
+              "duration": 52842000
             }
           },
           {
@@ -2159,7 +2159,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1719476900
+              "duration": 1543668200
             }
           },
           {
@@ -2172,7 +2172,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 51688800
+              "duration": 90133800
             }
           },
           {
@@ -2185,163 +2185,163 @@
             },
             "result": {
               "status": "passed",
-              "duration": 834301600
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 12,
-            "name": "I click on Send to create a new payment",
-            "match": {
-              "location": "features\\step_definitions\\payment.steps.js:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1852160199
+              "duration": 836260200
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
+            "name": "I click on Send to create a new payment",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1883853699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
             "name": "I select the automation beneficiary",
             "match": {
               "location": "features\\step_definitions\\payment.steps.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 194496199
+              "duration": 216508099
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 14,
+            "line": 15,
             "name": "I should see the payment form",
             "match": {
               "location": "features\\step_definitions\\payment.steps.js:18"
             },
             "result": {
               "status": "passed",
-              "duration": 5414999
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 15,
-            "name": "I enter payment amount \"9.9\"",
-            "match": {
-              "location": "features\\step_definitions\\payment.steps.js:24"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 203514100
+              "duration": 10443899
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 16,
-            "name": "I open the wallet drop down list to select a wallet",
+            "name": "I enter payment amount \"9.9\"",
             "match": {
-              "location": "features\\step_definitions\\payment.steps.js:31"
+              "location": "features\\step_definitions\\payment.steps.js:24"
             },
             "result": {
               "status": "passed",
-              "duration": 44074599
+              "duration": 200989199
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 17,
-            "name": "I select wallet \"GURUPAY_EUR\" from context",
+            "name": "I open the wallet drop down list to select a wallet",
             "match": {
-              "location": "features\\step_definitions\\payment.steps.js:38"
+              "location": "features\\step_definitions\\payment.steps.js:31"
             },
             "result": {
               "status": "passed",
-              "duration": 31716499
+              "duration": 38327100
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 18,
-            "name": "I enter reference \"Payment to beneficiary (auto test)\"",
+            "name": "I select wallet \"GURUPAY_EUR\" from context",
             "match": {
-              "location": "features\\step_definitions\\payment.steps.js:64"
+              "location": "features\\step_definitions\\payment.steps.js:38"
             },
             "result": {
               "status": "passed",
-              "duration": 5440600
+              "duration": 49158400
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 19,
-            "name": "I should the \"Sign the payment\" flag should be enabled by default",
+            "name": "I enter reference \"Payment to beneficiary (auto test)\"",
             "match": {
-              "location": "features\\step_definitions\\payment.steps.js:69"
+              "location": "features\\step_definitions\\payment.steps.js:64"
             },
             "result": {
               "status": "passed",
-              "duration": 7936900
+              "duration": 6700199
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 20,
-            "name": "I click Create and sign",
+            "name": "I should the \"Sign the payment\" flag should be enabled by default",
             "match": {
-              "location": "features\\step_definitions\\payment.steps.js:76"
+              "location": "features\\step_definitions\\payment.steps.js:69"
             },
             "result": {
               "status": "passed",
-              "duration": 33830100
+              "duration": 7831899
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 21,
+            "name": "I click Create and sign",
+            "match": {
+              "location": "features\\step_definitions\\payment.steps.js:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32036800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
             "name": "I enter the MFA code",
             "match": {
               "location": "features\\step_definitions\\mfa.steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 332626300
+              "duration": 346096399
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 22,
+            "line": 23,
             "name": "I should see a success message \"Payment was created successfully\"",
             "match": {
               "location": "features\\step_definitions\\common.steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 865834199
+              "duration": 889764100
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 23,
+            "line": 24,
             "name": "I should be on the home page",
             "match": {
               "location": "features\\step_definitions\\payment.steps.js:81"
             },
             "result": {
               "status": "passed",
-              "duration": 2699800
+              "duration": 2602899
             }
           },
           {
@@ -2349,7 +2349,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 11895299
+              "duration": 19896100
             }
           }
         ],
@@ -2379,7 +2379,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 25800
+              "duration": 27600
             }
           },
           {
@@ -2387,7 +2387,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 48184600
+              "duration": 54852400
             }
           },
           {
@@ -2400,7 +2400,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1523268700
+              "duration": 1718859200
             }
           },
           {
@@ -2413,7 +2413,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 51482900
+              "duration": 87972699
             }
           },
           {
@@ -2426,7 +2426,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 836016600
+              "duration": 827551600
             }
           },
           {
@@ -2439,7 +2439,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1345290200
+              "duration": 1858506800
             }
           },
           {
@@ -2452,7 +2452,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 621897599
+              "duration": 620859299
             }
           },
           {
@@ -2465,7 +2465,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5439700
+              "duration": 6745399
             }
           },
           {
@@ -2478,7 +2478,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 36399799
+              "duration": 36288300
             }
           },
           {
@@ -2491,7 +2491,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1903302600
+              "duration": 1903183199
             }
           },
           {
@@ -2504,7 +2504,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3012412700
+              "duration": 3010413899
             }
           },
           {
@@ -2512,7 +2512,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 11088900
+              "duration": 20249099
             }
           }
         ],
@@ -2542,7 +2542,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 20199
+              "duration": 23600
             }
           },
           {
@@ -2550,7 +2550,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 45388299
+              "duration": 55972000
             }
           },
           {
@@ -2563,7 +2563,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1724804900
+              "duration": 1720322899
             }
           },
           {
@@ -2576,7 +2576,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 52734899
+              "duration": 45413300
             }
           },
           {
@@ -2589,7 +2589,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 838125700
+              "duration": 836009300
             }
           },
           {
@@ -2602,7 +2602,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1324863099
+              "duration": 1823594200
             }
           },
           {
@@ -2610,7 +2610,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 14174400
+              "duration": 23627299
             }
           }
         ],
@@ -2624,231 +2624,6 @@
     "name": "Sub-user login",
     "tags": [],
     "uri": "features\\subUserLogin.feature"
-  },
-  {
-    "description": "    In order to increase my account balance\n    As a logged-in user\n    I want to be able to top up my wallet from card",
-    "elements": [
-      {
-        "description": "",
-        "id": "top-up-from-card;create-a-new-top-up-from-card",
-        "keyword": "Scenario",
-        "line": 12,
-        "name": "Create a new top up from card",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "skipped",
-              "duration": 174700
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 8,
-            "name": "I navigate to the login page",
-            "match": {
-              "location": "features\\step_definitions\\login.steps.js:5"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "I login with valid credentials",
-            "match": {
-              "location": "features\\step_definitions\\login.steps.js:13"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 10,
-            "name": "I enter the MFA code",
-            "match": {
-              "location": "features\\step_definitions\\mfa.steps.js:22"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 13,
-            "name": "I click the \"Top up\" on the page",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:6"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 14,
-            "name": "I click \"Choose from list\" on the modal",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:11"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 15,
-            "name": "I select \"GURUPAY_EUR\" from dropdown",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:16"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 16,
-            "name": "I click the \"Next\" on the page",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:6"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 17,
-            "name": "I should see the \"How would you like to pay?\" on the modal window",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:42"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 18,
-            "name": "I select \"Top up from card\" method",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:47"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 19,
-            "name": "I enter top up amount \"10\" in field",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:52"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 20,
-            "name": "I click \"Confirm\" on the modal window",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:59"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 21,
-            "name": "I pay with test card",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:73"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 22,
-            "name": "I should see success payment screen",
-            "match": {
-              "location": "features\\step_definitions\\topUpFromCard.steps.js:114"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 120200
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@only-individual",
-            "line": 1
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "id": "top-up-from-card",
-    "line": 2,
-    "keyword": "Feature",
-    "name": "Top up from card",
-    "tags": [
-      {
-        "name": "@only-individual",
-        "line": 1
-      }
-    ],
-    "uri": "features\\topUpFromCard.feature"
   },
   {
     "description": "    In order to increase my account balance\n    As a logged-in user\n    I want to be able to top up my wallet",
@@ -2865,7 +2640,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 20400
+              "duration": 20100
             }
           },
           {
@@ -2873,7 +2648,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 47014200
+              "duration": 55947299
             }
           },
           {
@@ -2886,7 +2661,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1537112999
+              "duration": 1647521800
             }
           },
           {
@@ -2899,7 +2674,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 88812500
+              "duration": 50298099
             }
           },
           {
@@ -2912,7 +2687,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 822140200
+              "duration": 831619800
             }
           },
           {
@@ -2925,7 +2700,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1928697200
+              "duration": 1922758600
             }
           },
           {
@@ -2938,7 +2713,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 200742199
+              "duration": 197933099
             }
           },
           {
@@ -2951,7 +2726,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 359320900
+              "duration": 363024600
             }
           },
           {
@@ -2964,7 +2739,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 103690200
+              "duration": 105781700
             }
           },
           {
@@ -2977,7 +2752,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 31228600
+              "duration": 28164899
             }
           },
           {
@@ -2990,7 +2765,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 93761400
+              "duration": 91678499
             }
           },
           {
@@ -3003,7 +2778,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 38532299
+              "duration": 39770899
             }
           },
           {
@@ -3016,7 +2791,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 39189399
+              "duration": 44261899
             }
           },
           {
@@ -3029,7 +2804,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 250499299
+              "duration": 274947599
             }
           },
           {
@@ -3042,7 +2817,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 368623800
+              "duration": 362767200
             }
           },
           {
@@ -3050,7 +2825,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 11745500
+              "duration": 21558299
             }
           }
         ],

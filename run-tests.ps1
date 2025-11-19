@@ -12,7 +12,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
 $global:ErrorActionPreference = "Stop"
 
 $wgExe = "C:\Program Files\WireGuard\wireguard.exe"
-$wgConfig = "C:\Program Files\WireGuard\Data\Configurations\dimaspc.conf.dpapi"
+$wgConfig = "C:\Program Files\WireGuard\Data\Configurations\pc.conf.dpapi"
 $projectPath = "D:\Work\cucumber-playwright-tests"
 
 Set-Location $projectPath

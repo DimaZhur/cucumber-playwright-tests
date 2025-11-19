@@ -73,7 +73,7 @@ When('I click "Confirm" on the modal window', async function () {
 When('I pay with test card', async function () {
   if (await this.page.$('#cardNumber')) {
     // G2Pay форма
-    await this.page.fill('#cardNumber', '4000 0000 0000 0002');
+    await this.page.fill('#cardNumber', '4000 0000 0000 0408');
     await this.page.fill('#expiryDate', '1230');
     await this.page.fill('#cardSecurityCode', '555');
     await this.page.fill('#cardholderName', 'Atest');

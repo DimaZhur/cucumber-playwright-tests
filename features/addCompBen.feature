@@ -7,6 +7,7 @@ Background:
   Given I navigate to the login page
   When I login with valid credentials
   And I enter the MFA code
+  # When I close the promo banner if it appears
 
     
 Scenario: Create a new company beneficiary
