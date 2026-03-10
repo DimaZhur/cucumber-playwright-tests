@@ -3,8 +3,15 @@ const { expect } = require('@playwright/test');
 
 // Кликаем по кнопке
 When('I click the {string} button', async function (buttonText) {
-  await this.page.getByRole('button', { name: buttonText }).click();
+    const button = this.page.getByRole('button', { name: buttonText });
+
+    // Ждём, пока кнопка появится (до 5 сек)
+    await button.waitFor({ state: 'visible', timeout: 10000 });
+
+    // Кликаем
+    await button.click();
 });
+
 
 // Кликаем по пункту меню
 When('I click the {string} menu item', async function (menuName) {

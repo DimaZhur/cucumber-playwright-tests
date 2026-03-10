@@ -110,15 +110,15 @@ When('I click {string} to go to the static password', async function (buttonText
   await this.page.getByRole('button', { name: buttonText }).click();
 });
 
-// Вводим универсальный пароль PASSWORD1 (используется как static password)
+// Вводим универсальный пароль PASSWORD2 (используется как static password)
 When('I fill a static password', async function () {
   const modal = this.page.locator('form.modal');
   await expect(modal).toBeVisible({ timeout: 10000 });
 
-  const password = process.env.PASSWORD1;
-  if (!password) throw new Error('Missing PASSWORD1 in .env');
+  const password = process.env.PASSWORD2;
+  if (!password) throw new Error('Missing PASSWORD2 in .env');
 
-  console.log('Filling static password from PASSWORD1');
+  console.log('Filling static password from PASSWORD2');
   await this.page.getByPlaceholder('Static password').fill(password);
 
   console.log('Static password entered successfully');
@@ -169,6 +169,7 @@ When('I click "Pay" to complete the order', async function () {
   await expect(modalButton).toBeVisible({ timeout: 10000 });
   await modalButton.click({ timeout: 10000 });
 });
+
 
 
 

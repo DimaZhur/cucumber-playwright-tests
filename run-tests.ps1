@@ -18,14 +18,14 @@ $projectPath = "D:\Work\cucumber-playwright-tests"
 Set-Location $projectPath
 
 # Telegram 
-$global:telegramToken = "8361825268:AAHIWmXE5eGG4b_x2ITivXXlZpHND0wi5lk"
+$global:telegramToken = "8361825268:AAHwR7Itmx53sXkfwdTwedXZC3XxmBQ9juw"
 $global:chatId = @("-1003234326791")
 
 #  Email 
 $global:smtpServer = "smtp.gmail.com"
 $global:smtpPort = 587
 $global:smtpUser = "qa.zhurauleu@gmail.com"
-$global:smtpPass = "lxqywvkoifwbztiy"  # пароль приложения Gmail
+$global:smtpPass = "iobhtviciwtnltmp"  # пароль приложения Gmail
 $global:mailTo = "d.zhurauleu@finsei.com, dina.osipova@finsei.com"
 
 #  Функции 
@@ -95,8 +95,6 @@ function global:Send-TelegramReportFile($filePath, $caption) {
         }
     }
 }
-
-
 
 function global:Send-EmailReport($subject, $bodyText, $attachmentPath) {
     try {
@@ -208,13 +206,13 @@ if ($elapsed -ge $maxWait) {
 }
 
 # Контексты тестов
-cd $projectPath
-$contexts = @(
-    "test:report:individual",
-    "test:report:business",
-    "test:report:sandbox:individual",
-    "test:report:sandbox:business"
-)
+# cd $projectPath
+# $contexts = @(
+#     "test:report:individual",
+#     "test:report:business",
+#     "test:report:sandbox:individual",
+#     "test:report:sandbox:business"
+# )
 
 
 # Контексты тестов
@@ -374,8 +372,130 @@ Time: $timestamp
     }
 }
 
-# === Разрешаем системе снова засыпать ===
-[Power]::SetThreadExecutionState(2147483648) | Out-Null
+# # Снимаем блокировку сна (не обязательно, но пусть будет)
+# [Power]::SetThreadExecutionState(2147483648) | Out-Null
 
-Write-Host "💤 Тесты завершены, блокировка сна снята." -ForegroundColor Gray
+# # Выключаем ПК сразу
+# shutdown.exe /s /f /t 0
+
+
+
+# ==============================
+# === ПРИНУДИТЕЛЬНЫЙ СОН/ВЫКЛ ===
+# ==============================
+
+# Подключаем WinForms (нужно для SetSuspendState)
+Add-Type -AssemblyName System.Windows.Forms
+
+# Определяем: комп поднялся автоматически (таймер/планировщик) или вручную (кнопкой)
+function Test-IsAutoWake {
+    try {
+        $lastWake = (powercfg /lastwake) | Out-String
+
+        # Сохраняем вывод в лог, чтобы потом понять, что Windows считает причиной пробуждения
+        $lastWakePath = Join-Path $projectPath "logs\power-lastwake.log"
+        $lastWake | Out-File -FilePath $lastWakePath -Encoding UTF8
+
+        # Если в выводе есть таймер/планировщик — считаем автоподъём
+        if (
+            $lastWake -match '(?i)wake source:\s*timer' -or
+            $lastWake -match '(?i)\btimer\b' -or
+            $lastWake -match '(?i)task scheduler'
+        ) {
+            return $true
+        }
+
+        # Если явно кнопка питания — это ручной запуск
+        if ($lastWake -match '(?i)power button') {
+            return $false
+        }
+
+        # Если непонятно — безопаснее НЕ усыплять (чтобы не мешать тебе)
+        return $false
+    }
+    catch {
+        # Если команда не сработала — тоже не усыпляем (безопасное поведение)
+        return $false
+    }
+}
+
+# Функция: 1) попробуй усыпить, 2) если ОС отказала — повтори, 3) если совсем не получается — выключи
+function Invoke-SleepOrShutdown {
+    param(
+        [int]$DelayBeforeSleepSec = 30,  # пауза перед сном
+        [int]$SleepAttempts       = 3,   # попытки сна
+        [int]$RetryDelaySec       = 10   # пауза между попытками, если ОС отказала
+    )
+
+    # Пауза, чтобы завершились отправки/логи
+    Write-Host "⏳ Жду $DelayBeforeSleepSec сек перед переводом в сон..." -ForegroundColor Yellow
+    Start-Sleep -Seconds $DelayBeforeSleepSec
+
+    # Снимаем блокировку сна (разрешаем системе засыпать)
+    [Power]::SetThreadExecutionState(2147483648) | Out-Null
+    Write-Host "✅ Блокировка сна снята (SetThreadExecutionState)." -ForegroundColor Green
+
+    # Логируем powercfg /requests (на будущее)
+    try {
+        $requests = (powercfg /requests) | Out-String
+        $reqLogPath = Join-Path $projectPath "logs\power-requests-after-tests.log"
+        $requests | Out-File -FilePath $reqLogPath -Encoding UTF8
+        Write-Host "📝 powercfg /requests сохранён: $reqLogPath" -ForegroundColor Gray
+    }
+    catch {
+        Write-Host "⚠️ Не удалось выполнить powercfg /requests: $($_.Exception.Message)" -ForegroundColor Yellow
+    }
+
+    # Пытаемся усыпить
+    for ($i = 1; $i -le $SleepAttempts; $i++) {
+
+        Write-Host "💤 Попытка сна #$i..." -ForegroundColor Cyan
+
+        try {
+            # Force = $true            -> принудительно
+            # DisableWakeEvent = $true -> не даём таймерам/событиям тут же разбудить
+            $ok = [System.Windows.Forms.Application]::SetSuspendState(
+                [System.Windows.Forms.PowerState]::Suspend,
+                $true,
+                $true
+            )
+
+            # Если ОС приняла запрос на сон — СРАЗУ выходим из скрипта
+            # Тогда после пробуждения этот процесс не продолжит выполнение и не "усыпит снова"
+            if ($ok) {
+                Write-Host "✅ Сон инициирован. Завершаю скрипт, чтобы после пробуждения не повторять сон." -ForegroundColor Green
+                exit 0
+            }
+
+            # Если вернулся False — ОС отказала усыплять
+            Write-Host "⚠️ ОС отказала усыплять (SetSuspendState вернул False). Повторю через $RetryDelaySec сек..." -ForegroundColor Yellow
+            Start-Sleep -Seconds $RetryDelaySec
+        }
+        catch {
+            Write-Host "⚠️ Ошибка при попытке сна: $($_.Exception.Message). Повторю через $RetryDelaySec сек..." -ForegroundColor Yellow
+            Start-Sleep -Seconds $RetryDelaySec
+        }
+    }
+
+    # Если все попытки вернули False/ошибку — выключаем ПК
+    Write-Host "🛑 Не удалось инициировать сон. Выполняю выключение..." -ForegroundColor Red
+    shutdown.exe /s /f /t 0
+}
+
+# Решаем: усыплять или нет
+if (Test-IsAutoWake) {
+    Write-Host "🤖 Комп был поднят автоматически (таймер/планировщик) — усыпляю после тестов." -ForegroundColor Cyan
+    Invoke-SleepOrShutdown -DelayBeforeSleepSec 30 -SleepAttempts 3 -RetryDelaySec 10
+}
+else {
+    Write-Host "🧑 Комп включён вручную — после тестов НЕ усыпляю." -ForegroundColor Yellow
+
+    # На всякий случай снимаем блокировку сна (если где-то ещё ставил)
+    [Power]::SetThreadExecutionState(2147483648) | Out-Null
+
+    exit 0
+}
+
+
+
 

@@ -1,6 +1,5 @@
 const { When } = require('@cucumber/cucumber');
 
-// Основной шаг — принимает MFA код напрямую
 When('I enter the MFA code {string}', async function (codeFromFeature) {
   const code = codeFromFeature || process.env.MFA;
   if (!code) throw new Error('MFA code not provided (neither feature nor .env)');
@@ -14,6 +13,8 @@ When('I enter the MFA code {string}', async function (codeFromFeature) {
   for (let i = 0; i < code.length && i < count; i++) {
     await inputs.nth(i).fill(code[i]);
   }
+
+  //await this.page.waitForTimeout(7000);
 
   console.log(`Entered MFA code: ${code}`);
 });
@@ -32,6 +33,8 @@ When('I enter the MFA code', async function () {
   for (let i = 0; i < code.length && i < count; i++) {
     await inputs.nth(i).fill(code[i]);
   }
+
+    await this.page.waitForTimeout(3000);
 
   console.log(`Entered MFA code from .env: ${code}`);
 });

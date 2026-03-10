@@ -7,7 +7,7 @@ const logsDir = path.join(__dirname, "logs");
 
 if (!fs.existsSync(logsDir)) fs.mkdirSync(logsDir, { recursive: true });
 
-// === Ищем последний JSON отчёт ===
+//Ищем последний JSON отчёт
 const jsonFiles = fs
   .readdirSync(reportsDir)
   .filter(f => f.endsWith(".json"))
@@ -22,10 +22,10 @@ if (jsonFiles.length === 0) {
 const latestJson = jsonFiles[0];
 console.log(`📄 Using JSON: ${latestJson}`);
 
-// === Определяем имя окружения / отчёта ===
+//Определяем имя окружения/отчёта
 const envName = path.basename(latestJson, ".json");
 
-// === Генерация HTML отчёта ===
+//Генерация HTML репорта
 const options = {
   theme: "bootstrap",
   jsonFile: latestJson,
@@ -47,7 +47,7 @@ try {
   console.error(`❌ Failed to generate HTML report: ${err.message}`);
 }
 
-// --- Анализ JSON и корректный подсчёт статусов по СЦЕНАРИЯМ ---
+//Анализ JSON и корректный подсчёт статусов по СЦЕНАРИЯМ
 const reportData = JSON.parse(fs.readFileSync(latestJson, 'utf-8'));
 
 let features = reportData.length;
@@ -55,7 +55,7 @@ let scenarios = 0, passed = 0, failed = 0, skipped = 0;
 let durationMs = 0;
 
 function scenarioStatus(scn) {
-  // берём статусы шагов + хуков
+  //берём статусы шагов + хуков
   const stepStatuses =
     (scn.steps || []).map(s => s.result?.status).filter(Boolean);
   const hookStatuses = [
@@ -65,14 +65,14 @@ function scenarioStatus(scn) {
 
   const statuses = [...stepStatuses, ...hookStatuses];
 
-  // если вообще нет статусов — считаем как skipped (сценарий отфильтрован)
+  //если вообще нет статусов — считаем как skipped (сценарий отфильтрован)
   if (statuses.length === 0) return 'skipped';
 
   if (statuses.includes('failed')) return 'failed';
   if (statuses.every(s => s === 'passed')) return 'passed';
   if (statuses.every(s => s === 'skipped')) return 'skipped';
 
-  // pending/undefined/ambiguous и т.п. — в skipped
+  //pending/undefined/ambiguous и т.п. — в skipped
   return 'skipped';
 }
 
@@ -94,7 +94,7 @@ reportData.forEach(f => {
 const durationSec = (durationMs / 1e9).toFixed(2);
 const timestamp = new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Warsaw' }).replace('T', ' ');
 
-// === Запись логов в компактном формате ===
+//Запись логов
 const safeEnvName = envName.replace(/[:]/g, '.').replace('test.report.', 'test-');
 const logFile = path.join(logsDir, `test-runs-${safeEnvName}.log`);
 const now = new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Warsaw' }).replace('T', ' ');

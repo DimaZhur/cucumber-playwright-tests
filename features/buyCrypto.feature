@@ -11,7 +11,7 @@ Background:
 
 Scenario: Create a new Buy Crypto
 When I navigate to the Crypto page from the menu
-When I click on the Buy Crypto action
+When I click on the Buy action
 When I select "TRC20" network in Buy Crypto form
 When I enter crypto wallet address in Buy Crypto form
 When I enter "10" as amount in Buy Crypto form

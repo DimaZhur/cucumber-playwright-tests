@@ -7,10 +7,10 @@ When('I navigate to the Crypto page from the menu', async function () {
   await this.page.getByRole('link', { name: 'Crypto' }).click();
 });
 
-// Клик именно по кнопке Buy Crypto
-When('I click on the Buy Crypto action', async function () {
+// Клик именно по кнопке Buy
+When('I click on the Buy action', async function () {
   // Явный селектор для уникальности
-  await this.page.getByRole('button', { name: 'Buy crypto' }).click();
+  await this.page.getByRole('button', { name: 'Buy' }).click();
 });
 
 // Клик по выпадашке "Select network" и выбор первого элемента (TRC 20)
