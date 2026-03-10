@@ -37,7 +37,7 @@ function global:Send-EmailReport($subject, $bodyText, $attachmentPath) {
         $msg.From = $smtpUser
         $msg.To.Add($mailTo)
         $msg.Subject = $subject
-        $msg.IsBodyHtml = $true  # ВАЖНО: теперь письмо HTML
+        $msg.IsBodyHtml = $true 
         $msg.Body = $bodyText
         $msg.BodyEncoding = [System.Text.Encoding]::UTF8
         $msg.SubjectEncoding = [System.Text.Encoding]::UTF8
@@ -61,7 +61,7 @@ function global:Send-EmailReport($subject, $bodyText, $attachmentPath) {
 
 
 function global:Send-TelegramMessage($text) {
-    foreach ($id in @($chatId)) {  # гарантируем перечисление
+    foreach ($id in @($chatId)) { 
         try {
             $url = "https://api.telegram.org/bot$telegramToken/sendMessage"
             $body = @{
@@ -328,7 +328,7 @@ if ($allowedSkipContexts -contains $context -and $failedScenarios -eq 0 -and $sk
     Write-Host "📘 Для $context один пропущенный сценарий считается нормой — считаем прогон успешным."
 }
 
-# === Формируем сообщение ===
+# Формируем сообщение
 if ($failedScenarios -gt 0) {
     $statusText = "❌ Failed $failedScenarios scenario(s)!"
 }
@@ -350,7 +350,6 @@ Failed: $failedScenarios
 Duration: ${duration}s
 Time: $timestamp
 "@
-
 
     Write-Host "⚙️ DEBUG: ВЫХОД НА ОТПРАВКУ УВЕДОМЛЕНИЙ ($context)" -ForegroundColor Yellow
     Write-Host "⚙️ DEBUG SUMMARY:`n$summary" -ForegroundColor Cyan
@@ -460,7 +459,7 @@ function Invoke-SleepOrShutdown {
                 $true
             )
 
-            # Если ОС приняла запрос на сон — СРАЗУ выходим из скрипта
+            # Если ОС приняла запрос на сон - СРАЗУ выходим из скрипта
             # Тогда после пробуждения этот процесс не продолжит выполнение и не "усыпит снова"
             if ($ok) {
                 Write-Host "✅ Сон инициирован. Завершаю скрипт, чтобы после пробуждения не повторять сон." -ForegroundColor Green
